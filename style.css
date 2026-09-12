@@ -1124,3 +1124,15 @@ a {
 .already-account a:hover {
   color: #123f68;
 }
+.input-error {
+  border-color: #a12626 !important;
+  outline: 1px solid #a12626 !important;
+}
+
+.error-message {
+  color: #a12626 !important;
+}
+
+.success-message {
+  color: #2f6d38 !important;
+}
