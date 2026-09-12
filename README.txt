@@ -24,3 +24,10 @@ ATUALIZAÇÃO V5:
 - Português -> assets/previa.png
 - English -> assets/previa_en.png
 - Os links "Ver imagem completa" também abrem a versão correspondente ao idioma.
+
+
+ATUALIZAÇÃO V6:
+- Adicionada a logo oficial do Genome 3D enviada pelo usuário.
+- A logo substitui o antigo quadrado com a letra G no cabeçalho.
+- A mesma logo é usada como favicon da aba do navegador.
+- Foi usado o arquivo original iconeGenome.webp, sem gerar nem redesenhar a imagem.

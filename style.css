@@ -876,3 +876,25 @@ a {
     font-size: 14px;
   }
 }
+
+
+/* =========================================================
+   LOGO OFICIAL DO GENOME 3D
+========================================================= */
+.brand-logo-wrap {
+  padding: 5px;
+  overflow: hidden;
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 520px) {
+  .brand-logo-wrap {
+    padding: 4px;
+  }
+}
