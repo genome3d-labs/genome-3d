@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadastro | Genome 3D</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/webp" href="assets/iconeGenome.webp">
+</head>
+
+<body class="login-page">
+
+  <div class="gov-strip">
+    <div class="shell gov-strip-inner">
+      <span>Genome Corporation©</span>
+      <a href="index.html">Voltar ao site</a>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+
+      <a class="brand" href="index.html">
+        <span class="brand-mark brand-logo-wrap">
+          <img
+            class="brand-logo"
+            src="assets/iconeGenome.webp"
+            alt="Genome 3D logo"
+          >
+        </span>
+
+        <span class="brand-copy">
+          <strong>Genome 3D</strong>
+          <small>Genome Corporation©</small>
+        </span>
+      </a>
+
+      <button
+        class="language-button"
+        id="language-toggle"
+        type="button"
+      >
+        English
+      </button>
+
+    </div>
+  </header>
+
+  <nav class="nav-strip">
+    <div class="shell nav-inner login-nav">
+      <a class="nav-button" href="login.html">
+        ← Voltar ao login
+      </a>
+    </div>
+  </nav>
+
+
+  <main class="login-main">
+
+    <section class="login-card register-card">
+
+      <div class="login-card-header">
+
+        <img
+          src="assets/perfil.jpg"
+          alt="Ícone de perfil"
+        >
+
+        <div>
+          <h1>Cadastro</h1>
+          <p>Genome Corporation©</p>
+        </div>
+
+      </div>
+
+
+      <form id="register-form" novalidate>
+
+        <!-- E-MAIL -->
+        <label for="register-email">
+          Adicione seu e-mail*
+        </label>
+
+        <input
+          id="register-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          placeholder="Digite seu e-mail"
+          required
+        >
+
+        <p
+          class="field-error"
+          id="email-error"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- SENHA -->
+        <label for="register-password">
+          Crie uma senha*
+        </label>
+
+        <input
+          id="register-password"
+          name="password"
+          type="password"
+          autocomplete="new-password"
+          placeholder="Crie sua senha"
+          required
+        >
+
+        <p
+          class="field-error"
+          id="password-error"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- CONFIRMAÇÃO -->
+        <label for="register-password-confirm">
+          Confirme sua senha*
+        </label>
+
+        <input
+          id="register-password-confirm"
+          name="password-confirm"
+          type="password"
+          autocomplete="new-password"
+          placeholder="Digite novamente sua senha"
+          required
+        >
+
+        <p
+          class="field-error"
+          id="confirm-error"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- CAPTCHA -->
+        <div class="captcha-box">
+
+          <div>
+            <strong>Confirme que você não é um robô</strong>
+            <span>Verificação de segurança</span>
+          </div>
+
+          <div class="captcha-placeholder">
+            CAPTCHA
+          </div>
+
+        </div>
+
+
+        <!-- TERMOS -->
+        <label class="terms-check">
+
+          <input
+            type="checkbox"
+            id="accept-terms"
+            required
+          >
+
+          <span>
+            Li e concordo com os
+            <a
+              href="termos.html"
+              target="_blank"
+              rel="noopener"
+            >
+              Termos e Condições
+            </a>.
+          </span>
+
+        </label>
+
+        <p
+          class="field-error"
+          id="terms-error"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- BOTÃO -->
+        <button
+          class="old-button primary login-submit"
+          type="submit"
+        >
+          Cadastrar
+        </button>
+
+
+        <p class="already-account">
+          Já tem uma conta?
+          <a href="login.html">Entrar.</a>
+        </p>
+
+
+        <p
+          id="register-message"
+          class="login-message"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer login-footer">
+
+    <div class="shell footer-inner">
+
+      <div>
+        <strong>Genome Corporation©</strong>
+        <span>Criação de conta</span>
+      </div>
+
+      <a href="index.html">
+        Voltar ao Genome 3D
+      </a>
+
+    </div>
+
+  </footer>
+
+  <script src="language.js"></script>
+  <script src="cadastro.js"></script>
+
+</body>
+</html>
