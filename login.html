@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Genome Corporation©</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+  <div class="gov-strip">
+    <div class="shell gov-strip-inner">
+      <span>Genome Corporation©</span>
+      <a href="index.html" data-i18n="backToSite">Voltar ao site</a>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">G</span>
+        <span class="brand-copy">
+          <strong>Genome 3D</strong>
+          <small>Genome Corporation©</small>
+        </span>
+      </a>
+
+      <button
+        class="language-button"
+        id="language-toggle"
+        type="button"
+        aria-label="Mudar idioma"
+        title="Mudar para inglês"
+      >
+        English
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-strip">
+    <div class="shell nav-inner login-nav">
+      <a class="nav-button" href="index.html" data-i18n="homeBack">← Página inicial</a>
+    </div>
+  </nav>
+
+  <main class="login-main">
+    <section class="login-card">
+      <div class="login-card-header">
+        <img src="assets/perfil.jpg" alt="Ícone de perfil" data-i18n-alt="profileAlt">
+        <div>
+          <h1>Login</h1>
+          <p>Genome Corporation©</p>
+        </div>
+      </div>
+
+      <form id="login-form">
+        <label for="usuario" data-i18n="userEmail">E-mail ou usuário</label>
+        <input
+          id="usuario"
+          name="usuario"
+          type="text"
+          autocomplete="username"
+          placeholder="Digite seu e-mail ou usuário"
+          data-i18n-placeholder="userPlaceholder"
+          required
+        >
+
+        <label for="senha" data-i18n="password">Senha</label>
+        <input
+          id="senha"
+          name="senha"
+          type="password"
+          autocomplete="current-password"
+          placeholder="Digite sua senha"
+          data-i18n-placeholder="passwordPlaceholder"
+          required
+        >
+
+        <div class="login-options">
+          <label class="remember">
+            <input type="checkbox">
+            <span data-i18n="rememberComputer">Lembrar neste computador</span>
+          </label>
+
+          <a href="#" id="forgot-link" data-i18n="forgotPassword">Esqueci minha senha</a>
+        </div>
+
+        <button class="old-button primary login-submit" type="submit" data-i18n="enter">
+          Entrar
+        </button>
+
+        <p id="login-message" class="login-message" aria-live="polite"></p>
+      </form>
+
+      <div class="login-card-footer" data-i18n="authNotConnected">
+        O sistema de autenticação ainda não está conectado a um servidor.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer login-footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>Genome Corporation©</strong>
+        <span data-i18n="accessArea">Área de acesso</span>
+      </div>
+
+      <a href="index.html" data-i18n="backToGenome">Voltar ao Genome 3D</a>
+    </div>
+  </footer>
+
+  <script src="language.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

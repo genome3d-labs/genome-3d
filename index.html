@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genome Corporation©</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="gov-strip">
+    <div class="shell gov-strip-inner">
+      <span>Genome Corporation©</span>
+      <span class="gov-note" data-i18n="topNote">Projeto experimental de visualização genética</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <a class="brand" href="index.html" aria-label="Página inicial">
+        <span class="brand-mark">G</span>
+        <span class="brand-copy">
+          <strong>Genome 3D</strong>
+          <small>Genome Corporation©</small>
+        </span>
+      </a>
+
+      <button
+        class="language-button"
+        id="language-toggle"
+        type="button"
+        aria-label="Mudar idioma"
+        title="Mudar para inglês"
+      >
+        English
+      </button>
+
+      <a class="login-button" href="login.html" aria-label="Abrir página de login">
+        <img src="assets/perfil.jpg" alt="Perfil">
+        <span>Login</span>
+      </a>
+    </div>
+  </header>
+
+  <nav class="nav-strip" aria-label="Menu principal">
+    <div class="shell nav-inner">
+      <a class="nav-button" href="#sobre" data-i18n="navAbout">Sobre o Genome</a>
+      <a class="nav-button" href="#recursos" data-i18n="navResources">Recursos</a>
+      <a class="nav-button" href="#downloads" data-i18n="navDownload">Downloads</a>
+      <a class="nav-button" href="#corporacao">Genome Corporation©</a>
+    </div>
+  </nav>
+
+  <main class="shell page-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">Genome 3D</div>
+      <a href="#sobre" data-i18n="sideOverview">Visão geral</a>
+      <a href="#recursos" data-i18n="sideResources">Recursos atuais</a>
+      <a href="#downloads" data-i18n="sideDownload">Download</a>
+      <a href="#corporacao" data-i18n="sideCorporation">Sobre a corporação</a>
+      <a href="login.html">Login</a>
+
+      <div class="sidebar-block">
+        <span data-i18n="currentVersion">Versão atual</span>
+        <strong>0.1 BETA</strong>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <section id="sobre" class="content-block intro-block">
+        <div class="section-rule"></div>
+
+        <h1>
+          <span data-i18n="aboutPrefix">Sobre o</span>
+          <span class="genome-title">Genome 3D©</span>
+        </h1>
+
+        <p class="lead" data-i18n="introLead">
+          O Genome 3D é um aplicativo em desenvolvimento para leitura,
+          exploração e visualização de sequências genéticas em arquivos FASTA.
+        </p>
+
+        <p data-i18n="introBody">
+          A proposta é apresentar a sequência de DNA de forma clara e visual,
+          reunindo fita principal, fita complementar e uma representação 3D
+          idealizada da dupla hélice em uma mesma interface.
+        </p>
+
+        <div class="quick-grid">
+          <article class="quick-card">
+            <div class="quick-icon">↓</div>
+            <h2>Download</h2>
+            <p data-i18n="downloadCardText">Acesse a versão pública disponível do Genome 3D.</p>
+            <a class="old-button primary" href="#downloads" data-i18n="goDownloads">Ir para downloads</a>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon">⌁</div>
+            <h2 data-i18n="viewTitle">Visualizar</h2>
+            <p data-i18n="viewCardText">Conheça as ferramentas atuais de leitura 2D e modelo 3D.</p>
+            <a class="old-button" href="#recursos" data-i18n="viewResources">Ver recursos</a>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon">i</div>
+            <h2 data-i18n="projectTitle">Projeto</h2>
+            <p data-i18n="projectCardText">Entenda a proposta e o estágio atual do desenvolvimento.</p>
+            <a class="old-button" href="#corporacao" data-i18n="learnMore">Saiba mais</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="recursos" class="content-block">
+        <div class="section-title-row">
+          <h2 data-i18n="resourcesHeading">Recursos atuais</h2>
+        </div>
+
+        <div class="resource-table">
+          <div class="resource-row">
+            <strong data-i18n="fastaTitle">Leitura FASTA</strong>
+            <span data-i18n="fastaText">Importação e leitura de sequências de DNA em arquivos FASTA.</span>
+          </div>
+
+          <div class="resource-row">
+            <strong data-i18n="view2dTitle">Visualização 2D</strong>
+            <span data-i18n="view2dText">Fita principal e complementar, com identificação visual de A, T, C e G.</span>
+          </div>
+
+          <div class="resource-row">
+            <strong data-i18n="model3dTitle">Modelo 3D</strong>
+            <span data-i18n="model3dText">Representação tridimensional idealizada da dupla hélice por trechos.</span>
+          </div>
+
+          <div class="resource-row">
+            <strong data-i18n="navigationTitle">Navegação</strong>
+            <span data-i18n="navigationText">Controles independentes para explorar a sequência em 2D e 3D.</span>
+          </div>
+        </div>
+
+        <div class="dna-key" aria-label="Legenda das bases">
+          <span><b class="a">A</b> <span data-i18n="adenine">Adenina</span></span>
+          <span><b class="t">T</b> <span data-i18n="thymine">Timina</span></span>
+          <span><b class="c">C</b> <span data-i18n="cytosine">Citosina</span></span>
+          <span><b class="g">G</b> <span data-i18n="guanine">Guanina</span></span>
+        </div>
+      </section>
+
+      <section id="downloads" class="content-block">
+        <div class="section-title-row">
+          <h2>Downloads</h2>
+        </div>
+
+        <div class="download-panel">
+          <div>
+            <p class="release-tag" data-i18n="currentVersionUpper">VERSÃO ATUAL</p>
+            <h3>Genome 0.1 BETA</h3>
+            <p data-i18n="downloadText">
+              A área está preparada para receber o instalador oficial do Genome.
+              O botão de download será ativado quando o arquivo final de distribuição
+              estiver publicado.
+            </p>
+          </div>
+
+          <button class="old-button primary big-button" type="button" disabled data-i18n="downloadSoon">
+            Download em breve
+          </button>
+        </div>
+      </section>
+
+      <section id="corporacao" class="content-block">
+        <div class="section-title-row">
+          <h2 data-i18n="aboutCorporation">Sobre a Genome Corporation©</h2>
+        </div>
+
+        <p data-i18n="corporationText">
+          A Genome Corporation© é a identidade de desenvolvimento do Genome 3D
+          e de futuras ferramentas voltadas à apresentação e exploração visual
+          de dados genéticos.
+        </p>
+
+        <div class="notice">
+          <strong data-i18n="importantLabel">Importante:</strong>
+          <span data-i18n="importantText">
+            o Genome 3D está em fase experimental e educacional. Ele não substitui
+            ferramentas científicas validadas, análises laboratoriais ou softwares
+            especializados de bioinformática.
+          </span>
+        </div>
+      </section>
+    </div>
+
+    <aside class="right-column">
+      <div class="right-box">
+        <div class="right-box-title" data-i18n="quickAccess">Acesso rápido</div>
+        <a href="#downloads" data-i18n="genomeDownload">Download do Genome</a>
+        <a href="#recursos" data-i18n="navResources">Recursos</a>
+        <a href="login.html" data-i18n="loginArea">Área de login</a>
+      </div>
+
+      <div class="right-box">
+        <div class="right-box-title" data-i18n="projectTitle">Projeto</div>
+        <p>Genome 3D</p>
+        <p><span data-i18n="versionLabel">Versão</span> 0.1 BETA</p>
+        <p>Windows</p>
+      </div>
+
+      <div class="right-box preview-box">
+        <div class="right-box-title" data-i18n="previewTitle">Prévia</div>
+
+        <a
+          class="preview-frame"
+          id="preview-link"
+          href="assets/previa.png"
+          target="_blank"
+          rel="noopener"
+          title="Clique para abrir a imagem completa"
+          data-i18n-title="previewOpenTitle"
+        >
+          <img
+            id="preview-image"
+            src="assets/previa.png"
+            alt="Prévia da interface do Genome 3D"
+            data-i18n-alt="previewAlt"
+          >
+        </a>
+
+        <p class="preview-caption" data-i18n="previewCaption">
+          Interface atual do Genome 3D
+        </p>
+
+        <a
+          class="preview-open"
+          id="preview-open-link"
+          href="assets/previa.png"
+          target="_blank"
+          rel="noopener"
+          data-i18n="viewFullImage"
+        >
+          Ver imagem completa
+        </a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>Genome Corporation©</strong>
+        <span data-i18n="footerProject">Genome 3D — projeto experimental</span>
+      </div>
+
+      <a href="mailto:contato@genomecorporation.com">
+        <span data-i18n="contactUs">Contate-nos</span>: contato@genomecorporation.com
+      </a>
+    </div>
+  </footer>
+
+  <script src="language.js"></script>
+</body>
+</html>
