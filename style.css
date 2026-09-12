@@ -898,3 +898,91 @@ a {
     padding: 4px;
   }
 }
+
+/* =========================================================
+   TERMOS E CONDIÇÕES
+   ========================================================= */
+
+.terms-page {
+  max-width: 1050px;
+  margin: 34px auto 55px;
+  padding: 0 24px;
+}
+
+.terms-box {
+  background: #f4f4f4;
+  border: 1px solid #8d9aa6;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    1px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.terms-heading {
+  padding: 24px 32px 20px;
+  background: linear-gradient(#e3edf6, #cbd9e7);
+  border-bottom: 1px solid #8ea4b8;
+}
+
+.terms-heading h1 {
+  margin: 0 0 6px;
+  color: #174f82;
+  font-size: 28px;
+}
+
+.terms-heading p {
+  margin: 0 0 5px;
+  font-weight: bold;
+  color: #4c4c4c;
+}
+
+.terms-heading span {
+  font-size: 13px;
+  color: #686868;
+}
+
+.terms-content {
+  margin: 28px;
+  padding: 26px 30px;
+  background: #ffffff;
+  border: 1px solid #b7b7b7;
+  line-height: 1.65;
+  color: #292929;
+}
+
+.terms-content h2 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  color: #174f82;
+  font-size: 18px;
+  border-bottom: 1px solid #d0d6dc;
+}
+
+.terms-content h2:first-child {
+  margin-top: 0;
+}
+
+.terms-content p {
+  margin: 8px 0 14px;
+}
+
+.terms-footer {
+  padding: 0 28px 28px;
+  text-align: right;
+}
+
+@media (max-width: 650px) {
+  .terms-page {
+    margin-top: 18px;
+    padding: 0 12px;
+  }
+
+  .terms-heading {
+    padding: 20px;
+  }
+
+  .terms-content {
+    margin: 15px;
+    padding: 20px;
+  }
+}
