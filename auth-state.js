@@ -59,6 +59,7 @@ const DOWNLOAD_URL =
     logoutButton.className = "logout-button";
     logoutButton.type = "button";
     logoutButton.textContent = "Sair";
+    logoutButton.setAttribute("data-i18n", "logout");
 
     logoutButton.hidden = true;
 
