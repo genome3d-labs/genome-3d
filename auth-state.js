@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginLink = document.querySelector(
     ".masthead .login-button"
   );
+  const downloadButton =
+  document.getElementById("download-button");
+
+const DOWNLOAD_URL =
+  "https://github.com/genome3d-labs/genome-3d/releases/download/v0.1-beta/Genome3D_Setup_0.1_BETA.exe";
 
   if (!loginLink) {
     console.warn("Botão de login não encontrado.");
