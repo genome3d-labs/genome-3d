@@ -73,6 +73,11 @@ const DOWNLOAD_URL =
   onAuthStateChanged(auth, (user) => {
 
     if (user) {
+      if (downloadButton) {
+  downloadButton.href = DOWNLOAD_URL;
+  downloadButton.removeAttribute("aria-disabled");
+  downloadButton.classList.remove("download-locked");
+}
 
       // mantém a foto de perfil
       loginLabel.textContent = user.email;
@@ -83,6 +88,11 @@ const DOWNLOAD_URL =
       logoutButton.hidden = false;
 
     } else {
+      if (downloadButton) {
+  downloadButton.href = "login.html?redirect=download";
+  downloadButton.setAttribute("aria-disabled", "true");
+  downloadButton.classList.add("download-locked");
+}
 
       // volta ao estado original
       loginLabel.textContent = "Login";
