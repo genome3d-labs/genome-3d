@@ -1136,3 +1136,64 @@ a {
 .success-message {
   color: #2f6d38 !important;
 }
+/* =========================================================
+   ÁREA DA CONTA FIREBASE
+========================================================= */
+
+.auth-area {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  max-width: 420px;
+  min-width: 0;
+}
+
+.auth-area .login-button {
+  max-width: 290px;
+  min-width: 0;
+}
+
+.auth-area .login-button span {
+  display: block;
+
+  max-width: 215px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.logout-button {
+  min-height: 45px;
+
+  padding: 5px 13px;
+
+  color: white;
+
+  border: 1px solid #9ab7cf;
+  border-radius: 5px;
+
+  background: linear-gradient(#326fa4, #255a8b);
+
+  font: inherit;
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    0 1px 1px rgba(0,0,0,.28);
+
+  text-shadow: 0 -1px 0 rgba(0,0,0,.55);
+}
+
+.logout-button:hover {
+  background: linear-gradient(#3a78ac, #2a6397);
+}
+
+.logout-button[hidden] {
+  display: none;
+}
