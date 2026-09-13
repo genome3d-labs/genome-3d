@@ -247,23 +247,31 @@ document.addEventListener("DOMContentLoaded", () => {
       // ENVIAR VERIFICAÇÃO DE E-MAIL
       try {
 
-        await sendEmailVerification(usuario);
+  await sendEmailVerification(usuario);
 
-      } catch (erroVerificacao) {
+  registerMessage.textContent =
+    "Conta criada com sucesso! Enviamos um e-mail de confirmação. Verifique também a caixa de spam.";
 
-        console.error(
-          "Erro ao enviar e-mail de verificação:",
-          erroVerificacao
-        );
-      }
+  registerMessage.classList.add(
+    "success-message"
+  );
 
+} catch (erroVerificacao) {
 
-      registerMessage.textContent =
-        "Conta criada com sucesso! Enviamos um e-mail de confirmação.";
+  console.error(
+    "Erro ao enviar e-mail de verificação:",
+    erroVerificacao
+  );
 
-      registerMessage.classList.add(
-        "success-message"
-      );
+  registerMessage.textContent =
+    "Sua conta foi criada, mas não conseguimos enviar o e-mail de confirmação. Tente novamente mais tarde.";
+
+  registerMessage.classList.add(
+    "error-message"
+  );
+
+  return;
+}
 
 
       setTimeout(() => {
