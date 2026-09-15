@@ -449,7 +449,81 @@ async function saveNickname() {
 
 }
 
+/* =========================================================
+   SELECIONAR FOTO DE PERFIL
+========================================================= */
 
+changePhotoButton.addEventListener(
+  "click",
+  () => {
+
+    profilePhotoInput.click();
+
+  }
+);
+
+
+profilePhotoInput.addEventListener(
+  "change",
+  () => {
+
+    const file =
+      profilePhotoInput.files[0];
+
+    if (!file) {
+      return;
+    }
+
+
+    /* ACEITA SOMENTE IMAGENS */
+
+    if (!file.type.startsWith("image/")) {
+
+      showMessage(
+        getLanguage() === "en"
+          ? "Please select a valid image."
+          : "Selecione uma imagem válida.",
+        "error"
+      );
+
+      profilePhotoInput.value = "";
+
+      return;
+    }
+
+
+    /* LIMITE DO ARQUIVO ORIGINAL: 5 MB */
+
+    const maxSize =
+      5 * 1024 * 1024;
+
+    if (file.size > maxSize) {
+
+      showMessage(
+        getLanguage() === "en"
+          ? "The image must be smaller than 5 MB."
+          : "A imagem deve ter menos de 5 MB.",
+        "error"
+      );
+
+      profilePhotoInput.value = "";
+
+      return;
+    }
+
+
+    /* MOSTRA A FOTO ESCOLHIDA */
+
+    const previewURL =
+      URL.createObjectURL(file);
+
+    profilePhoto.src =
+      previewURL;
+
+    showMessage("");
+
+  }
+);
 /* =========================================================
    BOTÃO SALVAR
 ========================================================= */
