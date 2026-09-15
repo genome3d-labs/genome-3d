@@ -1273,3 +1273,167 @@ a {
   font-size: 12px;
   font-weight: bold;
 }
+/* =========================================================
+   PERFIL DO USUÁRIO
+========================================================= */
+
+.profile-page {
+  min-height: 620px;
+  padding: 42px 20px 60px;
+  background: #ffffff;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border: 1px solid #9b9b9b;
+  background: #f8f8f8;
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.16);
+}
+
+
+/* CABEÇALHO DO CARD */
+
+.profile-card-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #9b9b9b;
+  background: linear-gradient(
+    #dce9f5,
+    #c6d8e9
+  );
+}
+
+.profile-card-header h1 {
+  margin: 0;
+  color: #154f7e;
+  font-size: 26px;
+}
+
+.profile-card-header p {
+  margin: 6px 0 0;
+  color: #555555;
+  font-size: 14px;
+}
+
+
+/* FOTO DE PERFIL */
+
+.profile-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 20px 20px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid #888888;
+  border-radius: 50%;
+  background: #dddddd;
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+#change-photo-button {
+  margin-top: 14px;
+}
+
+
+/* CAMPOS */
+
+.profile-field {
+  padding: 0 24px;
+  margin-top: 8px;
+}
+
+.profile-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.profile-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid #999999;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+}
+
+.profile-field input:focus {
+  outline: 1px solid #2d6d9f;
+  border-color: #2d6d9f;
+}
+
+.profile-help {
+  margin: 7px 0 0;
+  color: #666666;
+  font-size: 12px;
+}
+
+
+/* MENSAGENS */
+
+.profile-message {
+  min-height: 20px;
+  margin: 16px 24px 0;
+  font-size: 13px;
+}
+
+.profile-message.success-message {
+  color: #246b2c;
+}
+
+.profile-message.error-message {
+  color: #a12626;
+}
+
+
+/* BOTÃO SALVAR */
+
+.profile-save-button {
+  display: block;
+  width: calc(100% - 48px);
+  margin: 18px 24px 28px;
+  padding: 10px 14px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+  .profile-page {
+    padding: 25px 12px 40px;
+  }
+
+  .profile-card {
+    max-width: 100%;
+  }
+
+  .profile-card-header {
+    padding: 18px;
+  }
+
+  .profile-field {
+    padding: 0 18px;
+  }
+
+  .profile-message {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .profile-save-button {
+    width: calc(100% - 36px);
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
