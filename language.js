@@ -73,7 +73,11 @@
 
       loginUnavailable: "A página de login está pronta, mas a autenticação ainda precisa ser conectada a um servidor.",
       recoveryUnavailable: "A recuperação de senha será habilitada quando o sistema de contas for implementado.",
-      logout: "Sair"
+      logout: "Sair",
+      noAccount: "Não tem uma conta?",
+registerHere: "Cadastre-se aqui.",
+secureFirebase: "Autenticação segura via Firebase."
+      
     },
 
     "en": {
@@ -149,7 +153,10 @@
 
       loginUnavailable: "The login page is ready, but authentication still needs to be connected to a server.",
       recoveryUnavailable: "Password recovery will be enabled when the account system is implemented.",
-      logout: "Logout"
+      logout: "Logout",
+      noAccount: "Don't have an account?",
+registerHere: "Sign up here.",
+secureFirebase: "Secure authentication via Firebase."
     }
   };
 
