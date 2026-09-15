@@ -83,7 +83,7 @@ const DOWNLOAD_URL =
       // mantém a foto de perfil
       loginLabel.textContent = user.email;
 
-      loginLink.href = "#";
+      loginLink.href = "perfil.html";
       loginLink.title = user.email;
 
       logoutButton.hidden = false;
