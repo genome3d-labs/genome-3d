@@ -91,6 +91,10 @@ alreadyAccount: "Já tem uma conta?",
 signIn: "Entrar.",
       accountCreation: "Criação de conta",
 backToGenome: "Voltar ao Genome 3D",
+      emailPlaceholder: "Digite seu e-mail",
+passwordPlaceholder: "Crie sua senha",
+confirmPasswordPlaceholder: "Digite novamente sua senha",
+backToLogin: "Voltar ao login",
       
     },
 
@@ -186,7 +190,11 @@ registerButton: "Create Account",
 alreadyAccount: "Already have an account?",
 signIn: "Sign in.",
      accountCreation: "Account creation",
-backToGenome: "Back to Genome 3D", 
+backToGenome: "Back to Genome 3D",
+      emailPlaceholder: "Enter your email",
+passwordPlaceholder: "Create your password",
+confirmPasswordPlaceholder: "Enter your password again",
+backToLogin: "Back to login",
       
     }
   };
