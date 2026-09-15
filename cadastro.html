@@ -69,7 +69,7 @@
         >
 
         <div>
-          <h1>Cadastro</h1>
+          <h2 data-i18n="registerTitle">Cadastro</h2>
           <p>Genome Corporation©</p>
         </div>
 
@@ -79,7 +79,7 @@
       <form id="register-form" novalidate>
 
         <!-- E-MAIL -->
-        <label for="register-email">
+        <label for="register-email" data-i18n="registerEmail">
           Adicione seu e-mail*
         </label>
 
@@ -100,7 +100,7 @@
 
 
         <!-- SENHA -->
-        <label for="register-password">
+        <label for="register-password" data-i18n="createPassword">
           Crie uma senha*
         </label>
 
@@ -121,7 +121,7 @@
 
 
         <!-- CONFIRMAÇÃO -->
-        <label for="register-password-confirm">
+        <label for="register-password-confirm" data-i18n="confirmPassword">
           Confirme sua senha*
         </label>
 
@@ -142,19 +142,28 @@
 
 
         <!-- CAPTCHA -->
-     <div class="security-check">
+    <div class="security-check">
+
   <div class="security-check-icon">✓</div>
 
   <div class="security-check-text">
-    <strong>Verificação de segurança ativa</strong>
-    <span>Protegido por reCAPTCHA</span>
+    <strong data-i18n="securityActive">
+      Verificação de segurança ativa
+    </strong>
+
+    <span data-i18n="protectedRecaptcha">
+      Protegido por reCAPTCHA
+    </span>
   </div>
 
-  <div class="security-check-status">
+  <div
+    class="security-check-status"
+    data-i18n="secureStatus"
+  >
     SEGURO
   </div>
-</div>
 
+</div>
 
         <!-- TERMOS -->
         <label class="terms-check">
@@ -189,14 +198,17 @@
         <button
           class="old-button primary login-submit"
           type="submit"
+          data-i18n="registerButton"
         >
           Cadastrar
         </button>
 
 
         <p class="already-account">
+          <span data-i18n="alreadyAccount">
           Já tem uma conta?
-          <a href="login.html">Entrar.</a>
+              </span>
+          <a href="login.html" data-i18n="signIn">Entrar.</a>
         </p>
 
 
@@ -218,13 +230,13 @@
     <div class="shell footer-inner">
 
       <div>
-        <strong>Genome Corporation©</strong>
-        <span>Criação de conta</span>
-      </div>
+  <strong>Genome Corporation©</strong>
+  <span data-i18n="accountCreation">Criação de conta</span>
+</div>
 
-      <a href="index.html">
-        Voltar ao Genome 3D
-      </a>
+<a href="index.html" data-i18n="backToGenome">
+  Voltar ao Genome 3D
+</a>
 
     </div>
 
