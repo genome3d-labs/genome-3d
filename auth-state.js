@@ -87,14 +87,45 @@ const DOWNLOAD_URL =
   downloadButton.classList.remove("download-locked");
 }
 
-      // mantém a foto de perfil
-      loginLabel.textContent = user.email;
+     // CARREGA O NICKNAME DO USUÁRIO
+let accountName = user.email;
 
-      loginLink.href = "perfil.html";
-      loginLink.title = user.email;
+try {
 
-      logoutButton.hidden = false;
+  const userRef =
+    doc(db, "users", user.uid);
 
+  const userSnapshot =
+    await getDoc(userRef);
+
+  if (
+    userSnapshot.exists() &&
+    userSnapshot.data().nickname
+  ) {
+
+    accountName =
+      userSnapshot.data().nickname;
+  }
+
+} catch (error) {
+
+  console.error(
+    "Erro ao carregar nickname:",
+    error
+  );
+
+}
+
+
+// MOSTRA NICKNAME OU E-MAIL
+loginLabel.textContent = accountName;
+
+loginLink.href = "perfil.html";
+loginLink.title = accountName;
+
+
+// MOSTRA O BOTÃO SAIR
+logoutButton.hidden = false;
     } else {
       if (downloadButton) {
   downloadButton.href = "login.html?redirect=download";
