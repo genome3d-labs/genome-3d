@@ -76,7 +76,21 @@
       logout: "Sair",
       noAccount: "Não tem uma conta?",
 registerHere: "Cadastre-se aqui.",
-secureFirebase: "Autenticação segura via Firebase."
+secureFirebase: "Autenticação segura via Firebase.",
+      registerTitle: "Cadastro",
+registerEmail: "Adicione seu e-mail*",
+createPassword: "Crie uma senha*",
+confirmPassword: "Confirme sua senha*",
+
+securityActive: "Verificação de segurança ativa",
+protectedRecaptcha: "Protegido por reCAPTCHA",
+secureStatus: "SEGURO",
+
+registerButton: "Cadastrar",
+alreadyAccount: "Já tem uma conta?",
+signIn: "Entrar.",
+      accountCreation: "Criação de conta",
+backToGenome: "Voltar ao Genome 3D",
       
     },
 
@@ -156,7 +170,24 @@ secureFirebase: "Autenticação segura via Firebase."
       logout: "Logout",
       noAccount: "Don't have an account?",
 registerHere: "Sign up here.",
-secureFirebase: "Secure authentication via Firebase."
+secureFirebase: "Secure authentication via Firebase.",
+      accountCreation: "Account creation",
+backToGenome: "Back to Genome 3D",
+      registerTitle: "Sign Up",
+registerEmail: "Enter your email*",
+createPassword: "Create a password*",
+confirmPassword: "Confirm your password*",
+
+securityActive: "Security verification active",
+protectedRecaptcha: "Protected by reCAPTCHA",
+secureStatus: "SECURE",
+
+registerButton: "Create Account",
+alreadyAccount: "Already have an account?",
+signIn: "Sign in.",
+     accountCreation: "Account creation",
+backToGenome: "Back to Genome 3D", 
+      
     }
   };
 
