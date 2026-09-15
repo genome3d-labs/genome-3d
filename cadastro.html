@@ -51,7 +51,7 @@
   <nav class="nav-strip">
     <div class="shell nav-inner login-nav">
       <a class="nav-button" href="login.html">
-        ← Voltar ao login
+        ← <span data-i18n="backToLogin">Voltar ao login</span>
       </a>
     </div>
   </nav>
@@ -83,15 +83,14 @@
           Adicione seu e-mail*
         </label>
 
-        <input
-          id="register-email"
-          name="email"
-          type="email"
-          autocomplete="email"
-          placeholder="Digite seu e-mail"
-          required
-        >
-
+    <input
+  id="register-email"
+  name="email"
+  type="email"
+  autocomplete="email"
+  placeholder="Digite seu e-mail"
+  data-i18n-placeholder="emailPlaceholder"
+>
         <p
           class="field-error"
           id="email-error"
@@ -110,6 +109,7 @@
           type="password"
           autocomplete="new-password"
           placeholder="Crie sua senha"
+          data-i18n-placeholder="passwordPlaceholder"
           required
         >
 
@@ -131,6 +131,7 @@
           type="password"
           autocomplete="new-password"
           placeholder="Digite novamente sua senha"
+          data-i18n-placeholder="confirmPasswordPlaceholder"
           required
         >
 
