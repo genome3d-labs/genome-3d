@@ -28,7 +28,6 @@ const saveButton =
 const profileMessage =
   document.getElementById("profile-message");
 
-
 let currentUser = null;
 
 
@@ -41,14 +40,19 @@ const messages = {
   pt: {
     loading: "Carregando perfil...",
     nicknameRequired: "Digite um nickname.",
+
     nicknameInvalid:
       "O nickname deve ter entre 3 e 24 caracteres e pode conter letras, números, ponto, hífen e underline.",
+
     nicknameTaken:
       "Este nickname já está sendo utilizado.",
+
     saving:
       "Salvando alterações...",
+
     saved:
       "Nickname salvo com sucesso.",
+
     error:
       "Não foi possível salvar o nickname. Tente novamente."
   },
@@ -56,14 +60,19 @@ const messages = {
   en: {
     loading: "Loading profile...",
     nicknameRequired: "Enter a nickname.",
+
     nicknameInvalid:
       "The nickname must contain between 3 and 24 characters and may include letters, numbers, periods, hyphens and underscores.",
+
     nicknameTaken:
       "This nickname is already being used.",
+
     saving:
       "Saving changes...",
+
     saved:
       "Nickname saved successfully.",
+
     error:
       "Unable to save the nickname. Please try again."
   }
@@ -88,17 +97,22 @@ function getLanguage() {
 
 function getMessage(key) {
 
-  const language = getLanguage();
+  const language =
+    getLanguage();
 
   return messages[language][key];
 }
 
 
 /* =========================================================
-   MENSAGEM NA TELA
+   MENSAGENS NA TELA
 ========================================================= */
 
 function showMessage(text, type = "") {
+
+  if (!profileMessage) {
+    return;
+  }
 
   profileMessage.textContent = text;
 
@@ -160,10 +174,15 @@ async function loadProfile(user) {
   try {
 
     const userRef =
-      doc(db, "users", user.uid);
+      doc(
+        db,
+        "users",
+        user.uid
+      );
 
     const userSnapshot =
       await getDoc(userRef);
+
 
     if (userSnapshot.exists()) {
 
@@ -171,11 +190,12 @@ async function loadProfile(user) {
         userSnapshot.data();
 
       if (userData.nickname) {
+
         nicknameInput.value =
           userData.nickname;
       }
-
     }
+
 
     showMessage("");
 
@@ -252,6 +272,8 @@ async function saveNickname() {
       db,
       async (transaction) => {
 
+        /* PERFIL DO USUÁRIO */
+
         const userRef =
           doc(
             db,
@@ -279,6 +301,8 @@ async function saveNickname() {
         }
 
 
+        /* NOVO NICKNAME */
+
         const nicknameRef =
           doc(
             db,
@@ -293,7 +317,7 @@ async function saveNickname() {
           );
 
 
-        /* NICKNAME JÁ UTILIZADO */
+        /* NICKNAME PERTENCE A OUTRO USUÁRIO */
 
         if (
           nicknameSnapshot.exists() &&
@@ -307,7 +331,7 @@ async function saveNickname() {
         }
 
 
-        /* RESERVA NOVO NICKNAME */
+        /* RESERVA O NOVO NICKNAME */
 
         if (!nicknameSnapshot.exists()) {
 
@@ -315,6 +339,7 @@ async function saveNickname() {
             nicknameRef,
             {
               uid: currentUser.uid,
+
               createdAt:
                 serverTimestamp()
             }
@@ -322,7 +347,7 @@ async function saveNickname() {
         }
 
 
-        /* REMOVE NICKNAME ANTIGO */
+        /* LIBERA O NICKNAME ANTIGO */
 
         if (
           oldNicknameKey &&
@@ -342,13 +367,15 @@ async function saveNickname() {
         }
 
 
-        /* ATUALIZA PERFIL */
+        /* ATUALIZA O PERFIL */
 
         transaction.set(
           userRef,
           {
             nickname: nickname,
+
             nicknameKey: nicknameKey,
+
             updatedAt:
               serverTimestamp()
           },
@@ -361,13 +388,25 @@ async function saveNickname() {
     );
 
 
+    /* SALVOU COM SUCESSO */
+
     showMessage(
       getMessage("saved"),
       "success"
     );
-    setTimeout(() => {
-  window.location.href = "index.html";
-}, 800);
+
+
+    console.log(
+      "Nickname salvo. Redirecionando..."
+    );
+
+
+    /* VOLTA PARA A HOME */
+
+    window.location.replace(
+      "./index.html"
+    );
+
 
   } catch (error) {
 
@@ -393,13 +432,10 @@ async function saveNickname() {
         getMessage("error"),
         "error"
       );
-
     }
 
-  } finally {
 
     saveButton.disabled = false;
-
   }
 
 }
@@ -425,8 +461,9 @@ onAuthStateChanged(
 
     if (!user) {
 
-      window.location.href =
-        "login.html";
+      window.location.replace(
+        "./login.html"
+      );
 
       return;
     }
