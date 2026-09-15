@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Perfil — Genome 3D</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+
+<body>
+
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+
+    <div class="shell top-bar-inner">
+
+      <span>
+        Genome Corporation©
+      </span>
+
+      <a
+        href="index.html"
+        data-i18n="backToSite"
+      >
+        Voltar ao site
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- CABEÇALHO -->
+  <header class="masthead">
+
+    <div class="shell masthead-inner">
+
+      <a
+        href="index.html"
+        class="brand"
+      >
+
+        <img
+          src="assets/iconeGenome.webp"
+          alt="Genome 3D"
+        >
+
+        <div>
+
+          <strong>
+            Genome 3D
+          </strong>
+
+          <span>
+            Genome Corporation©
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <button
+        id="language-toggle"
+        class="old-button language-button"
+        type="button"
+      >
+        Português
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="nav-strip">
+
+    <div class="shell nav-inner login-nav">
+
+      <a
+        class="nav-button"
+        href="index.html"
+      >
+        ←
+        <span data-i18n="backToGenome">
+          Voltar ao Genome 3D
+        </span>
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- PERFIL -->
+  <main class="profile-page">
+
+    <section class="profile-card">
+
+
+      <!-- CABEÇALHO DO PERFIL -->
+      <div class="profile-card-header">
+
+        <h1 data-i18n="profileTitle">
+          Meu perfil
+        </h1>
+
+        <p data-i18n="profileDescription">
+          Personalize seu perfil do Genome 3D.
+        </p>
+
+      </div>
+
+
+      <!-- FOTO -->
+      <div class="profile-photo-section">
+
+        <img
+          id="profile-photo"
+          class="profile-photo"
+          src="assets/perfil.jpg"
+          alt="Foto de perfil"
+          data-i18n-alt="profilePhotoAlt"
+        >
+
+        <input
+          id="profile-photo-input"
+          type="file"
+          accept="image/png,image/jpeg,image/webp"
+          hidden
+        >
+
+        <button
+          id="change-photo-button"
+          class="old-button"
+          type="button"
+          data-i18n="changePhoto"
+        >
+          Alterar foto
+        </button>
+
+      </div>
+
+
+      <!-- NICKNAME -->
+      <div class="profile-field">
+
+        <label
+          for="profile-nickname"
+          data-i18n="nicknameLabel"
+        >
+          Nickname
+        </label>
+
+        <input
+          id="profile-nickname"
+          type="text"
+          maxlength="24"
+          autocomplete="off"
+          placeholder="Escolha seu nickname"
+          data-i18n-placeholder="nicknamePlaceholder"
+        >
+
+        <p
+          class="profile-help"
+          data-i18n="nicknameHelp"
+        >
+          Seu nickname será único dentro do Genome 3D.
+        </p>
+
+      </div>
+
+
+      <!-- MENSAGEM -->
+      <p
+        id="profile-message"
+        class="profile-message"
+        aria-live="polite"
+      ></p>
+
+
+      <!-- SALVAR -->
+      <button
+        id="save-profile-button"
+        class="old-button primary profile-save-button"
+        type="button"
+        data-i18n="saveProfile"
+      >
+        Salvar alterações
+      </button>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+
+    <div class="shell">
+
+      <strong>
+        Genome Corporation©
+      </strong>
+
+      <span data-i18n="userProfile">
+        Perfil do usuário
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- IDIOMA -->
+  <script src="language.js?v=5"></script>
+
+  <!-- PERFIL -->
+  <script
+    type="module"
+    src="perfil.js?v=1"
+  ></script>
+
+
+</body>
+</html>
