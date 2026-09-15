@@ -365,6 +365,9 @@ async function saveNickname() {
       getMessage("saved"),
       "success"
     );
+    setTimeout(() => {
+  window.location.href = "index.html";
+}, 800);
 
   } catch (error) {
 
