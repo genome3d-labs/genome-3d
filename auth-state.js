@@ -1,4 +1,11 @@
-import { auth } from "./firebase-config.js?v=3";
+import {
+  auth,
+  db
+} from "./firebase-config.js?v=3";
+import {
+  doc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
 
 import {
   onAuthStateChanged,
@@ -71,7 +78,7 @@ const DOWNLOAD_URL =
   // ESTADO DA CONTA
   // =========================================
 
-  onAuthStateChanged(auth, (user) => {
+  onAuthStateChanged(auth, async (user) => {
 
     if (user) {
       if (downloadButton) {
