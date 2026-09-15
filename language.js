@@ -95,6 +95,8 @@ backToGenome: "Voltar ao Genome 3D",
 passwordPlaceholder: "Crie sua senha",
 confirmPasswordPlaceholder: "Digite novamente sua senha",
 backToLogin: "Voltar ao login",
+agreeTerms: "Li e concordo com os",
+termsConditions: "Termos e Condições",
       
     },
 
@@ -195,6 +197,8 @@ backToGenome: "Back to Genome 3D",
 passwordPlaceholder: "Create your password",
 confirmPasswordPlaceholder: "Enter your password again",
 backToLogin: "Back to login",
+      agreeTerms: "I agree to the",
+termsConditions: "Terms and Conditions",
       
     }
   };
