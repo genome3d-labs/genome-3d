@@ -28,6 +28,15 @@ const saveButton =
 const profileMessage =
   document.getElementById("profile-message");
 
+const profilePhoto =
+  document.getElementById("profile-photo");
+
+const profilePhotoInput =
+  document.getElementById("profile-photo-input");
+
+const changePhotoButton =
+  document.getElementById("change-photo-button");
+
 let currentUser = null;
 
 
