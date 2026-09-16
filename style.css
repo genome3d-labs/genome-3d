@@ -1478,3 +1478,333 @@ a {
   border-color: #765600;
 
 }
+/* =========================================================
+   PÁGINA DE FEEDBACKS
+========================================================= */
+
+.feedback-page {
+  min-height: 650px;
+  padding: 40px 20px 60px;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+
+.feedback-card {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+
+  border: 1px solid #999999;
+
+  background: #f8f8f8;
+
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.feedback-card-header {
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #999999;
+
+  background: linear-gradient(
+    #dce9f5,
+    #c6d8e9
+  );
+}
+
+
+.feedback-card-header h1 {
+  margin: 0;
+
+  color: #154f7e;
+
+  font-size: 26px;
+}
+
+
+.feedback-card-header p {
+  margin: 6px 0 0;
+
+  color: #555555;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DADOS DO USUÁRIO
+========================================================= */
+
+.feedback-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #cccccc;
+
+  background: #eeeeee;
+}
+
+
+.feedback-user-photo {
+  width: 58px;
+  height: 58px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 1px solid #777777;
+
+  background: #dddddd;
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.20);
+}
+
+
+.feedback-user-info {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+
+.feedback-user-info strong {
+  color: #1b4f78;
+
+  font-size: 17px;
+}
+
+
+.feedback-user-info span {
+  margin-top: 3px;
+
+  color: #666666;
+
+  font-size: 13px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.feedback-form {
+  padding: 24px;
+}
+
+
+.feedback-field {
+  margin-bottom: 20px;
+}
+
+
+.feedback-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #111111;
+
+  font-weight: bold;
+}
+
+
+.feedback-field select,
+.feedback-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #999999;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font: inherit;
+
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+/* SELECT */
+
+.feedback-field select {
+  height: 40px;
+
+  padding: 7px 10px;
+}
+
+
+/* TEXTAREA */
+
+.feedback-field textarea {
+  min-height: 170px;
+
+  padding: 11px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+/* FOCO */
+
+.feedback-field select:focus,
+.feedback-field textarea:focus {
+  outline: 1px solid #2d6d9f;
+
+  border-color: #2d6d9f;
+}
+
+
+/* =========================================================
+   TEXTO AUXILIAR
+========================================================= */
+
+.feedback-help {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #666666;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.feedback-status {
+  min-height: 20px;
+
+  margin: 4px 0 14px;
+
+  font-size: 13px;
+}
+
+
+.feedback-status.success-message {
+  color: #246b2c;
+}
+
+
+.feedback-status.error-message {
+  color: #a12626;
+}
+
+
+/* =========================================================
+   BOTÃO ENVIAR
+========================================================= */
+
+.feedback-submit-button {
+  width: 100%;
+
+  padding: 11px 16px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   AVISO FINAL
+========================================================= */
+
+.feedback-note {
+  margin: 0 24px 24px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #b9b9b9;
+
+  background: #eeeeee;
+}
+
+
+.feedback-note strong {
+  color: #154f7e;
+}
+
+
+.feedback-note p {
+  margin: 5px 0 0;
+
+  color: #555555;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .feedback-page {
+    padding:
+      25px
+      12px
+      40px;
+  }
+
+
+  .feedback-card {
+    max-width: 100%;
+  }
+
+
+  .feedback-card-header {
+    padding: 18px;
+  }
+
+
+  .feedback-user {
+    padding: 18px;
+  }
+
+
+  .feedback-form {
+    padding: 18px;
+  }
+
+
+  .feedback-note {
+    margin:
+      0
+      18px
+      18px;
+  }
+
+}
