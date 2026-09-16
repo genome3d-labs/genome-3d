@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   const downloadButton =
   document.getElementById("download-button");
+  const feedbackButton =
+  document.getElementById("feedback-button");
 
 const DOWNLOAD_URL =
   "https://github.com/genome3d-labs/genome-3d/releases/download/v0.1-beta/Genome3D_Setup_0.1_BETA.exe";
@@ -82,6 +84,9 @@ const DOWNLOAD_URL =
   onAuthStateChanged(auth, async (user) => {
 
     if (user) {
+      if (feedbackButton) {
+  feedbackButton.href = "feedbacks.html";
+}
       if (downloadButton) {
   downloadButton.href = DOWNLOAD_URL;
   downloadButton.removeAttribute("aria-disabled");
