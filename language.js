@@ -97,6 +97,20 @@ confirmPasswordPlaceholder: "Digite novamente sua senha",
 backToLogin: "Voltar ao login",
 agreeTerms: "Li e concordo com os",
 termsConditions: "Termos e Condições",
+      profileTitle: "Meu perfil",
+profileDescription: "Personalize seu perfil do Genome 3D.",
+
+changePhoto: "Alterar foto",
+
+nicknameLabel: "Nickname",
+nicknamePlaceholder: "Escolha seu nickname",
+nicknameHelp: "Seu nickname será único dentro do Genome 3D.",
+
+saveProfile: "Salvar alterações",
+
+userProfile: "Perfil do usuário",
+
+profilePhotoAlt: "Foto de perfil",
       
     },
 
@@ -199,6 +213,20 @@ confirmPasswordPlaceholder: "Enter your password again",
 backToLogin: "Back to login",
       agreeTerms: "I agree to the",
 termsConditions: "Terms and Conditions",
+      profileTitle: "My Profile",
+profileDescription: "Customize your Genome 3D profile.",
+
+changePhoto: "Change photo",
+
+nicknameLabel: "Nickname",
+nicknamePlaceholder: "Choose your nickname",
+nicknameHelp: "Your nickname will be unique within Genome 3D.",
+
+saveProfile: "Save changes",
+
+userProfile: "User profile",
+
+profilePhotoAlt: "Profile picture",
       
     }
   };
