@@ -198,17 +198,43 @@ async function loadProfile(user) {
       const userData =
         userSnapshot.data();
 
-      if (userData.nickname) {
+      console.log(
+        "Dados do perfil carregados:",
+        userData
+      );
+
+
+      /* CARREGA O NICKNAME */
+
+      if (
+        userData.nickname &&
+        nicknameInput
+      ) {
 
         nicknameInput.value =
           userData.nickname;
+
       }
-      if (userData.photoData) {
 
-  profilePhoto.src =
-    userData.photoData;
 
-}
+      /* CARREGA A FOTO */
+
+      if (
+        userData.photoData &&
+        profilePhoto
+      ) {
+
+        profilePhoto.src =
+          userData.photoData;
+
+      }
+
+    } else {
+
+      console.log(
+        "Perfil ainda não existe no Firestore."
+      );
+
     }
 
 
@@ -225,9 +251,10 @@ async function loadProfile(user) {
       getMessage("error"),
       "error"
     );
-  }
-}
 
+  }
+
+}
 
 /* =========================================================
    SALVAR NICKNAME
