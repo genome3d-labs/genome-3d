@@ -33,6 +33,7 @@ const DOWNLOAD_URL =
   // alteramos somente o SPAN.
   // Nunca mais apagamos o conteúdo inteiro do botão.
   const loginLabel = loginLink.querySelector("span");
+  const loginPhoto = loginLink.querySelector("img");
 
 
   // Cria um contêiner para Login/Conta + Sair
@@ -93,24 +94,50 @@ let accountName = user.email;
 try {
 
   const userRef =
-    doc(db, "users", user.uid);
+    doc(
+      db,
+      "users",
+      user.uid
+    );
 
   const userSnapshot =
     await getDoc(userRef);
 
-  if (
-    userSnapshot.exists() &&
-    userSnapshot.data().nickname
-  ) {
 
-    accountName =
-      userSnapshot.data().nickname;
+  if (userSnapshot.exists()) {
+
+    const userData =
+      userSnapshot.data();
+
+
+    /* NICKNAME */
+
+    if (userData.nickname) {
+
+      accountName =
+        userData.nickname;
+
+    }
+
+
+    /* FOTO DE PERFIL */
+
+    if (
+      userData.photoData &&
+      loginPhoto
+    ) {
+
+      loginPhoto.src =
+        userData.photoData;
+
+    }
+
   }
 
 } catch (error) {
 
   console.error(
-    "Erro ao carregar nickname:",
+    "Erro ao carregar perfil:",
     error
   );
 
@@ -135,6 +162,12 @@ logoutButton.hidden = false;
 
       // volta ao estado original
       loginLabel.textContent = "Login";
+      if (loginPhoto) {
+
+  loginPhoto.src =
+    "assets/perfil.jpg";
+
+}
 
       loginLink.href = "login.html";
       loginLink.title = "Login";
