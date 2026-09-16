@@ -168,12 +168,35 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        setTimeout(() => {
+        const parametros =
+  new URLSearchParams(
+    window.location.search
+  );
 
-          window.location.href =
-            "index.html";
+const destino =
+  parametros.get("redirect");
 
-        }, 700);
+
+setTimeout(() => {
+
+  if (destino === "feedbacks") {
+
+    window.location.href =
+      "feedbacks.html";
+
+  } else if (destino === "download") {
+
+    window.location.href =
+      "index.html#downloads";
+
+  } else {
+
+    window.location.href =
+      "index.html";
+
+  }
+
+}, 700);
 
 
       } catch (error) {
