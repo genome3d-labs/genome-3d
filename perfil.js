@@ -38,7 +38,7 @@ const changePhotoButton =
   document.getElementById("change-photo-button");
 
 let currentUser = null;
-
+let selectedPhotoData = null;
 
 /* =========================================================
    MENSAGENS PT / EN
@@ -203,6 +203,12 @@ async function loadProfile(user) {
         nicknameInput.value =
           userData.nickname;
       }
+      if (userData.photoData) {
+
+  profilePhoto.src =
+    userData.photoData;
+
+}
     }
 
 
@@ -378,23 +384,34 @@ async function saveNickname() {
 
         /* ATUALIZA O PERFIL */
 
-        transaction.set(
-          userRef,
-          {
-            nickname: nickname,
+        const profileData = {
 
-            nicknameKey: nicknameKey,
+  nickname: nickname,
 
-            updatedAt:
-              serverTimestamp()
-          },
-          {
-            merge: true
-          }
-        );
+  nicknameKey: nicknameKey,
 
-      }
-    );
+  updatedAt:
+    serverTimestamp()
+
+};
+
+
+if (selectedPhotoData) {
+
+  profileData.photoData =
+    selectedPhotoData;
+
+}
+
+
+transaction.set(
+  userRef,
+  profileData,
+  {
+    merge: true
+  }
+);
+    
 
 
     /* SALVOU COM SUCESSO */
@@ -450,8 +467,86 @@ async function saveNickname() {
 }
 
 /* =========================================================
-   SELECIONAR FOTO DE PERFIL
+   FOTO DE PERFIL
 ========================================================= */
+
+function resizeProfileImage(file) {
+
+  return new Promise((resolve, reject) => {
+
+    const reader =
+      new FileReader();
+
+    reader.onload = () => {
+
+      const image =
+        new Image();
+
+      image.onload = () => {
+
+        const canvas =
+          document.createElement("canvas");
+
+        const size = 160;
+
+        canvas.width = size;
+        canvas.height = size;
+
+        const ctx =
+          canvas.getContext("2d");
+
+
+        const cropSize =
+          Math.min(
+            image.width,
+            image.height
+          );
+
+        const sourceX =
+          (image.width - cropSize) / 2;
+
+        const sourceY =
+          (image.height - cropSize) / 2;
+
+
+        ctx.drawImage(
+          image,
+          sourceX,
+          sourceY,
+          cropSize,
+          cropSize,
+          0,
+          0,
+          size,
+          size
+        );
+
+
+        const compressedImage =
+          canvas.toDataURL(
+            "image/webp",
+            0.75
+          );
+
+        resolve(compressedImage);
+
+      };
+
+
+      image.onerror = reject;
+
+      image.src =
+        reader.result;
+    };
+
+
+    reader.onerror = reject;
+
+    reader.readAsDataURL(file);
+
+  });
+}
+
 
 changePhotoButton.addEventListener(
   "click",
@@ -465,7 +560,7 @@ changePhotoButton.addEventListener(
 
 profilePhotoInput.addEventListener(
   "change",
-  () => {
+  async () => {
 
     const file =
       profilePhotoInput.files[0];
@@ -474,8 +569,6 @@ profilePhotoInput.addEventListener(
       return;
     }
 
-
-    /* ACEITA SOMENTE IMAGENS */
 
     if (!file.type.startsWith("image/")) {
 
@@ -486,18 +579,14 @@ profilePhotoInput.addEventListener(
         "error"
       );
 
-      profilePhotoInput.value = "";
-
       return;
     }
 
 
-    /* LIMITE DO ARQUIVO ORIGINAL: 5 MB */
-
-    const maxSize =
-      5 * 1024 * 1024;
-
-    if (file.size > maxSize) {
+    if (
+      file.size >
+      5 * 1024 * 1024
+    ) {
 
       showMessage(
         getLanguage() === "en"
@@ -506,21 +595,34 @@ profilePhotoInput.addEventListener(
         "error"
       );
 
-      profilePhotoInput.value = "";
-
       return;
     }
 
 
-    /* MOSTRA A FOTO ESCOLHIDA */
+    try {
 
-    const previewURL =
-      URL.createObjectURL(file);
+      selectedPhotoData =
+        await resizeProfileImage(file);
 
-    profilePhoto.src =
-      previewURL;
+      profilePhoto.src =
+        selectedPhotoData;
 
-    showMessage("");
+      showMessage("");
+
+    } catch (error) {
+
+      console.error(
+        "Erro ao processar foto:",
+        error
+      );
+
+      showMessage(
+        getLanguage() === "en"
+          ? "Unable to process the image."
+          : "Não foi possível processar a imagem.",
+        "error"
+      );
+    }
 
   }
 );
