@@ -111,6 +111,8 @@ saveProfile: "Salvar alterações",
 userProfile: "Perfil do usuário",
 
 profilePhotoAlt: "Foto de perfil",
+      // Português
+viewFeedbacks: "Veja os feedbacks",
       
     },
 
@@ -227,6 +229,8 @@ saveProfile: "Save changes",
 userProfile: "User profile",
 
 profilePhotoAlt: "Profile picture",
+      // Inglês
+viewFeedbacks: "View feedbacks",
       
     }
   };
