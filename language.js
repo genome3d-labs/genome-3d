@@ -113,6 +113,53 @@ userProfile: "Perfil do usuário",
 profilePhotoAlt: "Foto de perfil",
       // Português
 viewFeedbacks: "Veja os feedbacks",
+      feedbackPage: "Página de feedbacks",
+
+feedbackTitle: "Feedbacks",
+feedbackDescription: "Compartilhe sua experiência com o Genome 3D.",
+
+feedbackTypeLabel: "Tipo de feedback",
+feedbackTypePlaceholder: "Selecione uma opção",
+feedbackTypeSuggestion: "Sugestão",
+feedbackTypeBug: "Problema / Bug",
+feedbackTypeInterface: "Interface",
+feedbackTypePerformance: "Desempenho",
+feedbackTypeOther: "Outro",
+
+feedbackRatingLabel: "Avaliação",
+feedbackRatingPlaceholder: "Selecione uma nota",
+
+feedbackRating5: "5 — Excelente",
+feedbackRating4: "4 — Muito bom",
+feedbackRating3: "3 — Bom",
+feedbackRating2: "2 — Regular",
+feedbackRating1: "1 — Ruim",
+
+feedbackMessageLabel: "Seu feedback",
+feedbackMessagePlaceholder: "Conte para nós sua experiência, sugestão ou problema encontrado.",
+feedbackMessageHelp: "Máximo de 2000 caracteres.",
+
+feedbackSubmit: "Enviar feedback",
+
+feedbackNoteTitle: "Importante",
+feedbackNoteText: "Seu feedback ajuda no desenvolvimento e aprimoramento do Genome 3D.",
+
+feedbackFooter: "Feedbacks do Genome 3D",
+
+viewFeedbacks: "Veja os feedbacks",
+
+backToFeedbackPage: "Voltar para feedbacks",
+sendFeedbackNav: "Enviar um feedback",
+
+feedbackListTitle: "Feedbacks da comunidade",
+feedbackListDescription: "Veja experiências, sugestões e opiniões enviadas por usuários do Genome 3D.",
+
+feedbackListLoading: "Carregando feedbacks...",
+
+feedbackListEmptyTitle: "Nenhum feedback encontrado.",
+feedbackListEmptyText: "Seja o primeiro usuário a compartilhar sua experiência com o Genome 3D.",
+
+communityFeedbackFooter: "Feedbacks da comunidade",
       
     },
 
@@ -231,6 +278,53 @@ userProfile: "User profile",
 profilePhotoAlt: "Profile picture",
       // Inglês
 viewFeedbacks: "View feedbacks",
+      feedbackPage: "Feedback page",
+
+feedbackTitle: "Feedbacks",
+feedbackDescription: "Share your experience with Genome 3D.",
+
+feedbackTypeLabel: "Feedback type",
+feedbackTypePlaceholder: "Select an option",
+feedbackTypeSuggestion: "Suggestion",
+feedbackTypeBug: "Problem / Bug",
+feedbackTypeInterface: "Interface",
+feedbackTypePerformance: "Performance",
+feedbackTypeOther: "Other",
+
+feedbackRatingLabel: "Rating",
+feedbackRatingPlaceholder: "Select a rating",
+
+feedbackRating5: "5 — Excellent",
+feedbackRating4: "4 — Very good",
+feedbackRating3: "3 — Good",
+feedbackRating2: "2 — Fair",
+feedbackRating1: "1 — Poor",
+
+feedbackMessageLabel: "Your feedback",
+feedbackMessagePlaceholder: "Tell us about your experience, suggestion, or an issue you found.",
+feedbackMessageHelp: "Maximum of 2000 characters.",
+
+feedbackSubmit: "Send feedback",
+
+feedbackNoteTitle: "Important",
+feedbackNoteText: "Your feedback helps us develop and improve Genome 3D.",
+
+feedbackFooter: "Genome 3D Feedbacks",
+
+viewFeedbacks: "View feedbacks",
+
+backToFeedbackPage: "Back to feedbacks",
+sendFeedbackNav: "Send feedback",
+
+feedbackListTitle: "Community feedback",
+feedbackListDescription: "See experiences, suggestions, and opinions shared by Genome 3D users.",
+
+feedbackListLoading: "Loading feedbacks...",
+
+feedbackListEmptyTitle: "No feedback found.",
+feedbackListEmptyText: "Be the first user to share your experience with Genome 3D.",
+
+communityFeedbackFooter: "Community feedback",
       
     }
   };
