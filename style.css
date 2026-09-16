@@ -1808,3 +1808,54 @@ a {
   }
 
 }
+/* =========================================================
+   NAVEGAÇÃO DA PÁGINA DE FEEDBACKS
+========================================================= */
+
+.feedback-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO - VER FEEDBACKS
+========================================================= */
+
+.view-feedbacks-button {
+  margin-left: auto;
+
+  min-width: 280px;
+
+  padding: 8px 22px;
+
+  text-align: center;
+
+  border: 2px solid #333333;
+
+  background: linear-gradient(
+    #36d7e5,
+    #13b8c8
+  );
+
+  color: #111111;
+
+  font-weight: bold;
+
+  text-decoration: none;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.view-feedbacks-button:hover {
+  background: linear-gradient(
+    #57e4ef,
+    #22c8d7
+  );
+
+  border-color: #111111;
+}
