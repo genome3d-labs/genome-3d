@@ -1,168 +1,412 @@
-import {
-  auth,
-  db
-} from "./firebase-config.js?v=3";
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-import {
-  onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+<head>
 
-import {
-  doc,
-  getDoc
-} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-/* =========================================================
-   ELEMENTOS DA PÁGINA
-========================================================= */
+  <title>Feedbacks — Genome 3D</title>
 
-const feedbackUserName =
-  document.getElementById("feedback-user-name");
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 
-const feedbackUserPhoto =
-  document.getElementById("feedback-user-photo");
+</head>
 
-const feedbackUserEmail =
-  document.getElementById("feedback-user-email");
 
+<body>
 
-let currentUser = null;
 
+  <!-- =====================================================
+       BARRA SUPERIOR
+  ====================================================== -->
 
-/* =========================================================
-   CARREGAR DADOS DO USUÁRIO
-========================================================= */
+  <div class="gov-strip">
 
-async function loadFeedbackUser(user) {
+    <div class="shell gov-strip-inner">
 
-  let accountName =
-    user.email || "Genome 3D User";
+      <span>
+        Genome Corporation©
+      </span>
 
-  let profilePhoto =
-    "assets/perfil.jpg";
+      <a
+        href="index.html"
+        data-i18n="backToSite"
+      >
+        Voltar ao site
+      </a>
 
+    </div>
 
-  try {
+  </div>
 
-    const userRef =
-      doc(
-        db,
-        "users",
-        user.uid
-      );
 
+  <!-- =====================================================
+       CABEÇALHO
+  ====================================================== -->
 
-    const userSnapshot =
-      await getDoc(userRef);
+  <header class="masthead">
 
+    <div class="shell masthead-inner">
 
-    if (userSnapshot.exists()) {
+      <a
+        href="index.html"
+        class="brand"
+      >
 
-      const userData =
-        userSnapshot.data();
+        <img
+          src="assets/iconeGenome.webp"
+          alt="Genome 3D"
+        >
 
+        <div>
 
-      /* NICKNAME */
+          <strong>
+            Genome 3D
+          </strong>
 
-      if (userData.nickname) {
+          <span>
+            Genome Corporation©
+          </span>
 
-        accountName =
-          userData.nickname;
+        </div>
 
-      }
+      </a>
 
 
-      /* FOTO DE PERFIL */
+      <button
+        id="language-toggle"
+        class="old-button language-button"
+        type="button"
+      >
+        Português
+      </button>
 
-      if (userData.photoData) {
+    </div>
 
-        profilePhoto =
-          userData.photoData;
+  </header>
 
-      }
 
-    }
+  <!-- =====================================================
+       NAVEGAÇÃO
+  ====================================================== -->
 
+  <nav class="nav-strip">
 
-  } catch (error) {
+    <div class="shell nav-inner login-nav">
 
-    console.error(
-      "Erro ao carregar perfil:",
-      error
-    );
+      <a
+        class="nav-button"
+        href="index.html"
+      >
+        ←
+        <span data-i18n="backToGenome">
+          Voltar ao Genome 3D
+        </span>
+      </a>
 
-  }
+    </div>
 
+  </nav>
 
-  /* MOSTRA NICKNAME */
 
-  if (feedbackUserName) {
+  <!-- =====================================================
+       CONTEÚDO
+  ====================================================== -->
 
-    feedbackUserName.textContent =
-      accountName;
+  <main class="feedback-page">
 
-  }
+    <section class="feedback-card">
 
 
-  /* MOSTRA E-MAIL */
+      <!-- CABEÇALHO -->
 
-  if (feedbackUserEmail) {
+      <div class="feedback-card-header">
 
-    feedbackUserEmail.textContent =
-      user.email || "";
+        <h1 data-i18n="feedbackTitle">
+          Feedbacks
+        </h1>
 
-  }
+        <p data-i18n="feedbackDescription">
+          Compartilhe sua experiência com o Genome 3D.
+        </p>
 
+      </div>
 
-  /* MOSTRA FOTO */
 
-  if (feedbackUserPhoto) {
+      <!-- =================================================
+           USUÁRIO
+      ================================================== -->
 
-    feedbackUserPhoto.src =
-      profilePhoto;
+      <div class="feedback-user">
 
-  }
+        <img
+          id="feedback-user-photo"
+          class="feedback-user-photo"
+          src="assets/perfil.jpg"
+          alt="Foto de perfil"
+          data-i18n-alt="profilePhotoAlt"
+        >
 
-}
 
+        <div class="feedback-user-info">
 
-/* =========================================================
-   AUTENTICAÇÃO
-========================================================= */
+          <strong
+            id="feedback-user-name"
+          >
+            Usuário
+          </strong>
 
-onAuthStateChanged(
-  auth,
-  async (user) => {
+          <span
+            id="feedback-user-email"
+          ></span>
 
-    /* USUÁRIO NÃO ESTÁ LOGADO */
+        </div>
 
-    if (!user) {
+      </div>
 
-      window.location.replace(
-        "login.html?redirect=feedbacks"
-      );
 
-      return;
+      <!-- =================================================
+           FORMULÁRIO
+      ================================================== -->
 
-    }
+      <form
+        id="feedback-form"
+        class="feedback-form"
+      >
 
 
-    /* USUÁRIO LOGADO */
+        <!-- TIPO -->
 
-    currentUser =
-      user;
+        <div class="feedback-field">
 
+          <label
+            for="feedback-type"
+            data-i18n="feedbackTypeLabel"
+          >
+            Tipo de feedback
+          </label>
 
-    await loadFeedbackUser(
-      user
-    );
 
+          <select
+            id="feedback-type"
+            required
+          >
 
-    console.log(
-      "Página de feedbacks liberada para:",
-      user.uid
-    );
+            <option
+              value=""
+              data-i18n="feedbackTypePlaceholder"
+            >
+              Selecione uma opção
+            </option>
 
-  }
-);
+            <option
+              value="suggestion"
+              data-i18n="feedbackTypeSuggestion"
+            >
+              Sugestão
+            </option>
+
+            <option
+              value="bug"
+              data-i18n="feedbackTypeBug"
+            >
+              Problema / Bug
+            </option>
+
+            <option
+              value="interface"
+              data-i18n="feedbackTypeInterface"
+            >
+              Interface
+            </option>
+
+            <option
+              value="performance"
+              data-i18n="feedbackTypePerformance"
+            >
+              Desempenho
+            </option>
+
+            <option
+              value="other"
+              data-i18n="feedbackTypeOther"
+            >
+              Outro
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO -->
+
+        <div class="feedback-field">
+
+          <label
+            for="feedback-rating"
+            data-i18n="feedbackRatingLabel"
+          >
+            Avaliação
+          </label>
+
+
+          <select
+            id="feedback-rating"
+            required
+          >
+
+            <option
+              value=""
+              data-i18n="feedbackRatingPlaceholder"
+            >
+              Selecione uma nota
+            </option>
+
+            <option value="5">
+              5 — Excelente
+            </option>
+
+            <option value="4">
+              4 — Muito bom
+            </option>
+
+            <option value="3">
+              3 — Bom
+            </option>
+
+            <option value="2">
+              2 — Regular
+            </option>
+
+            <option value="1">
+              1 — Ruim
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+
+        <div class="feedback-field">
+
+          <label
+            for="feedback-text"
+            data-i18n="feedbackMessageLabel"
+          >
+            Seu feedback
+          </label>
+
+
+          <textarea
+            id="feedback-text"
+            maxlength="2000"
+            required
+            placeholder="Conte para nós sua experiência, sugestão ou problema encontrado."
+            data-i18n-placeholder="feedbackMessagePlaceholder"
+          ></textarea>
+
+
+          <span
+            class="feedback-help"
+            data-i18n="feedbackMessageHelp"
+          >
+            Máximo de 2000 caracteres.
+          </span>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <p
+          id="feedback-status"
+          class="feedback-status"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- BOTÃO -->
+
+        <button
+          id="feedback-submit-button"
+          class="old-button primary feedback-submit-button"
+          type="submit"
+          data-i18n="feedbackSubmit"
+        >
+          Enviar feedback
+        </button>
+
+
+      </form>
+
+
+      <!-- =================================================
+           AVISO
+      ================================================== -->
+
+      <div class="feedback-note">
+
+        <strong data-i18n="feedbackNoteTitle">
+          Importante
+        </strong>
+
+        <p data-i18n="feedbackNoteText">
+          Seu feedback ajuda no desenvolvimento e aprimoramento do Genome 3D.
+        </p>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       RODAPÉ
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="shell">
+
+      <strong>
+        Genome Corporation©
+      </strong>
+
+      <span data-i18n="feedbackFooter">
+        Feedbacks do Genome 3D
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+
+  <script
+    src="language.js?v=7"
+  ></script>
+
+  <script
+    type="module"
+    src="feedback.js?v=1"
+  ></script>
+
+
+</body>
+
+</html>
