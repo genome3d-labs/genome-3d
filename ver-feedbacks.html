@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Ver Feedbacks — Genome 3D</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <link
+    rel="icon"
+    type="image/webp"
+    href="assets/iconeGenome.webp"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       BARRA SUPERIOR
+  ====================================================== -->
+
+  <div class="gov-strip">
+
+    <div class="shell gov-strip-inner">
+
+      <span>
+        Genome Corporation©
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       CABEÇALHO
+  ====================================================== -->
+
+  <header class="masthead">
+
+    <div class="shell masthead-inner">
+
+
+      <a
+        class="brand"
+        href="index.html"
+      >
+
+        <span class="brand-mark brand-logo-wrap">
+
+          <img
+            class="brand-logo"
+            src="assets/iconeGenome.webp"
+            alt="Genome 3D logo"
+          >
+
+        </span>
+
+
+        <span class="brand-copy">
+
+          <strong>
+            Genome 3D
+          </strong>
+
+          <small>
+            Genome Corporation©
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="language-button"
+        id="language-toggle"
+        type="button"
+      >
+        English
+      </button>
+
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       NAVEGAÇÃO
+  ====================================================== -->
+
+  <nav class="nav-strip">
+
+    <div class="shell nav-inner feedback-list-nav">
+
+
+      <a
+        class="nav-button"
+        href="feedbacks.html"
+      >
+        ←
+        <span data-i18n="backToFeedbackPage">
+          Voltar para feedbacks
+        </span>
+      </a>
+
+
+      <a
+        class="nav-button send-feedback-nav-button"
+        href="feedbacks.html"
+        data-i18n="sendFeedbackNav"
+      >
+        Enviar um feedback
+      </a>
+
+
+    </div>
+
+  </nav>
+
+
+  <!-- =====================================================
+       CONTEÚDO PRINCIPAL
+  ====================================================== -->
+
+  <main class="feedback-list-page">
+
+    <section class="feedback-list-container">
+
+
+      <!-- CABEÇALHO DA PÁGINA -->
+
+      <div class="feedback-list-heading">
+
+        <h1 data-i18n="feedbackListTitle">
+          Feedbacks da comunidade
+        </h1>
+
+        <p data-i18n="feedbackListDescription">
+          Veja experiências, sugestões e opiniões enviadas por usuários do Genome 3D.
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           CARREGANDO
+      ================================================== -->
+
+      <div
+        id="feedback-list-loading"
+        class="feedback-list-message"
+      >
+
+        <span data-i18n="feedbackListLoading">
+          Carregando feedbacks...
+        </span>
+
+      </div>
+
+
+      <!-- =================================================
+           NENHUM FEEDBACK
+      ================================================== -->
+
+      <div
+        id="feedback-list-empty"
+        class="feedback-list-message"
+        hidden
+      >
+
+        <strong data-i18n="feedbackListEmptyTitle">
+          Nenhum feedback encontrado.
+        </strong>
+
+        <p data-i18n="feedbackListEmptyText">
+          Seja o primeiro usuário a compartilhar sua experiência com o Genome 3D.
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           LISTA GERADA PELO JAVASCRIPT
+      ================================================== -->
+
+      <div
+        id="feedback-list"
+        class="feedback-list"
+      ></div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       MODELO DE UM FEEDBACK
+       O JAVASCRIPT USARÁ ESTE TEMPLATE
+  ====================================================== -->
+
+  <template id="feedback-card-template">
+
+    <article class="community-feedback-card">
+
+
+      <!-- USUÁRIO -->
+
+      <div class="community-feedback-header">
+
+        <img
+          class="community-feedback-photo"
+          src="assets/perfil.jpg"
+          alt="Foto de perfil"
+        >
+
+
+        <div class="community-feedback-user">
+
+          <div class="community-feedback-user-line">
+
+            <strong
+              class="community-feedback-nickname"
+            >
+              Usuário
+            </strong>
+
+            <span class="community-feedback-dot">
+              •
+            </span>
+
+            <span
+              class="community-feedback-date"
+            ></span>
+
+          </div>
+
+
+          <div class="community-feedback-meta">
+
+            <span
+              class="community-feedback-type"
+            ></span>
+
+            <span>
+              •
+            </span>
+
+            <span
+              class="community-feedback-version"
+            ></span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- AVALIAÇÃO -->
+
+      <div class="community-feedback-rating">
+
+        <span
+          class="community-feedback-rating-value"
+        ></span>
+
+      </div>
+
+
+      <!-- TEXTO -->
+
+      <div class="community-feedback-body">
+
+        <p
+          class="community-feedback-message"
+        ></p>
+
+      </div>
+
+
+    </article>
+
+  </template>
+
+
+  <!-- =====================================================
+       RODAPÉ
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="shell">
+
+      <strong>
+        Genome Corporation©
+      </strong>
+
+      <span data-i18n="communityFeedbackFooter">
+        Feedbacks da comunidade
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+
+  <script
+    src="language.js?v=8"
+  ></script>
+
+  <script
+    type="module"
+    src="ver-feedbacks.js?v=1"
+  ></script>
+
+
+</body>
+
+</html>
