@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -22,338 +21,14 @@
     type="image/webp"
     href="assets/iconeGenome.webp"
   >
-
-
-  <style>
-
-    /* =====================================================
-       PÁGINA DE NOVIDADES
-       ===================================================== */
-
-    .news-intro {
-      margin-bottom: 28px;
-    }
-
-
-    .news-intro p {
-      max-width: 780px;
-
-      margin: 0;
-
-      color: #444;
-
-      line-height: 1.65;
-    }
-
-
-    /* FILTROS */
-
-    .news-filters {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin-bottom: 24px;
-
-      padding-bottom: 18px;
-
-      border-bottom:
-        1px solid #b7b7b7;
-    }
-
-
-    .news-filter {
-      min-height: 34px;
-
-      padding:
-        6px 13px;
-
-      border:
-        1px solid #9c9c9c;
-
-      border-radius: 2px;
-
-      background:
-        linear-gradient(
-          #ffffff,
-          #e8e8e8
-        );
-
-      color: #222;
-
-      font-family: inherit;
-
-      font-size: 13px;
-
-      cursor: pointer;
-    }
-
-
-    .news-filter:hover {
-      background:
-        #e5edf5;
-    }
-
-
-    .news-filter.active {
-      background:
-        #2b6397;
-
-      border-color:
-        #214c76;
-
-      color: #ffffff;
-    }
-
-
-    /* =====================================================
-       PUBLICAÇÕES
-       ===================================================== */
-
-    .news-list {
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 20px;
-    }
-
-
-    .news-entry {
-      background:
-        #ffffff;
-
-      border:
-        1px solid #aeb5bc;
-
-      box-shadow:
-        inset 0 1px 0 #ffffff;
-    }
-
-
-    /* CABEÇALHO DA PUBLICAÇÃO */
-
-    .news-entry-header {
-      padding:
-        18px 21px 15px;
-
-      border-bottom:
-        1px solid #d0d4d8;
-
-      background:
-        #f5f6f7;
-    }
-
-
-    .news-entry-meta {
-      display: flex;
-
-      align-items: center;
-
-      flex-wrap: wrap;
-
-      gap: 9px;
-
-      margin-bottom: 8px;
-    }
-
-
-    .news-category {
-      display: inline-block;
-
-      padding:
-        3px 7px;
-
-      border:
-        1px solid #7f9bb4;
-
-      background:
-        #e8f0f7;
-
-      color:
-        #214f7f;
-
-      font-size: 10px;
-
-      font-weight: 700;
-
-      letter-spacing: .08em;
-
-      text-transform: uppercase;
-    }
-
-
-    .news-category.website {
-      border-color:
-        #999999;
-
-      background:
-        #eeeeee;
-
-      color:
-        #555555;
-    }
-
-
-    .news-date {
-      color:
-        #777;
-
-      font-size:
-        12px;
-    }
-
-
-    .news-entry h2 {
-      margin: 0;
-
-      color:
-        #214f7f;
-
-      font-size:
-        23px;
-
-      line-height:
-        1.25;
-    }
-
-
-    /* CONTEÚDO */
-
-    .news-entry-body {
-      padding:
-        19px 21px 22px;
-
-      color:
-        #333;
-
-      line-height:
-        1.6;
-    }
-
-
-    .news-entry-body p {
-      margin:
-        0 0 14px;
-    }
-
-
-    .news-entry-body p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    .news-entry-body ul {
-      margin:
-        12px 0 16px 20px;
-
-      padding: 0;
-    }
-
-
-    .news-entry-body li {
-      margin-bottom:
-        6px;
-    }
-
-
-    /* VERSÃO */
-
-    .news-version {
-      display:
-        inline-block;
-
-      margin-top:
-        5px;
-
-      padding:
-        5px 9px;
-
-      background:
-        #f1f1f1;
-
-      border:
-        1px solid #bdbdbd;
-
-      color:
-        #444;
-
-      font-family:
-        "Courier New",
-        monospace;
-
-      font-size:
-        12px;
-    }
-
-
-    /* LINK LATERAL ATIVO */
-
-    .sidebar .active-link {
-      background:
-        #dfeaf5;
-
-      font-weight:
-        700;
-    }
-
-
-    /* CAIXA DA COLUNA DIREITA */
-
-    .news-small-note {
-      color:
-        #666;
-
-      font-size:
-        12px;
-
-      line-height:
-        1.5;
-    }
-
-
-    /* OCULTAR FILTRO */
-
-    .news-entry.news-hidden {
-      display:
-        none;
-    }
-
-
-    /* RESPONSIVO */
-
-    @media (max-width: 700px) {
-
-      .news-entry-header,
-      .news-entry-body {
-        padding-left:
-          16px;
-
-        padding-right:
-          16px;
-      }
-
-
-      .news-entry h2 {
-        font-size:
-          20px;
-      }
-
-    }
-
-  </style>
-
 </head>
 
 
 <body>
 
-
   <!-- =====================================================
        BARRA SUPERIOR
-       ===================================================== -->
+  ====================================================== -->
 
   <div class="gov-strip">
 
@@ -377,12 +52,11 @@
 
   <!-- =====================================================
        CABEÇALHO
-       ===================================================== -->
+  ====================================================== -->
 
   <header class="masthead">
 
     <div class="shell masthead-inner">
-
 
       <a
         class="brand"
@@ -390,9 +64,7 @@
         aria-label="Página inicial"
       >
 
-        <span
-          class="brand-mark brand-logo-wrap"
-        >
+        <span class="brand-mark brand-logo-wrap">
 
           <img
             class="brand-logo"
@@ -446,7 +118,6 @@
 
       </a>
 
-
     </div>
 
   </header>
@@ -454,7 +125,7 @@
 
   <!-- =====================================================
        MENU SUPERIOR
-       ===================================================== -->
+  ====================================================== -->
 
   <nav
     class="nav-strip"
@@ -462,7 +133,6 @@
   >
 
     <div class="shell nav-inner">
-
 
       <a
         class="nav-button"
@@ -508,20 +178,21 @@
         Página de feedbacks
       </a>
 
-
     </div>
 
   </nav>
 
 
   <!-- =====================================================
-       CONTEÚDO
-       ===================================================== -->
+       CONTEÚDO PRINCIPAL
+  ====================================================== -->
 
   <main class="shell page-layout">
 
 
-    <!-- MENU LATERAL -->
+    <!-- ===================================================
+         MENU LATERAL
+    ==================================================== -->
 
     <aside class="sidebar">
 
@@ -592,10 +263,10 @@
 
 
     <!-- ===================================================
-         CONTEÚDO CENTRAL
-         =================================================== -->
+         ÁREA DE NOVIDADES
+    ==================================================== -->
 
-    <div class="main-content">
+    <div class="main-content news-page-content">
 
 
       <section class="content-block">
@@ -603,289 +274,297 @@
 
         <div class="section-title-row">
 
-          <h1
-            style="
-              margin: 0;
-              color: #9a4f22;
-              font-size: 30px;
-            "
-            data-news-i18n="pageTitle"
-          >
+          <h1 class="news-page-title">
             Novidades
           </h1>
 
         </div>
 
 
-        <div class="news-intro">
-
-          <p data-news-i18n="pageIntro">
-            Acompanhe as atualizações do Genome 3D,
-            novas versões do aplicativo e melhorias
-            realizadas no website.
-          </p>
-
-        </div>
-
-
-        <!-- FILTROS -->
-
-        <div class="news-filters">
-
-          <button
-            class="news-filter active"
-            type="button"
-            data-filter="all"
-            data-news-i18n="filterAll"
-          >
-            Todas
-          </button>
-
-
-          <button
-            class="news-filter"
-            type="button"
-            data-filter="app"
-            data-news-i18n="filterApp"
-          >
-            Genome 3D
-          </button>
-
-
-          <button
-            class="news-filter"
-            type="button"
-            data-filter="website"
-            data-news-i18n="filterWebsite"
-          >
-            Website
-          </button>
-
-        </div>
+        <p class="news-page-description">
+          Acompanhe as principais atualizações do Genome 3D
+          e do website.
+        </p>
 
 
         <!-- =================================================
-             LISTA DE NOVIDADES
-             ================================================= -->
+             NOVIDADE 1
+        ================================================== -->
 
-        <div class="news-list">
-
-
-          <!-- ===============================================
-               GENOME 3D 0.2
-               =============================================== -->
-
-          <article
-            class="news-entry"
-            data-category="app"
-          >
+        <article class="news-card">
 
 
-            <div class="news-entry-header">
+          <div class="news-card-top">
 
+            <div>
 
-              <div class="news-entry-meta">
+              <span class="news-type">
+                GENOME 3D
+              </span>
 
-                <span
-                  class="news-category"
-                  data-news-i18n="categoryApp"
-                >
-                  GENOME 3D
-                </span>
-
-                <span
-                  class="news-date"
-                  data-news-i18n="date02"
-                >
-                  20 de setembro de 2026
-                </span>
-
-              </div>
-
-
-              <h2 data-news-i18n="title02">
-                Genome 3D 0.2 BETA lançado
-              </h2>
-
+              <span class="news-date">
+                20 de setembro de 2026
+              </span>
 
             </div>
 
 
-            <div class="news-entry-body">
+            <span class="news-version-badge">
+              0.2 BETA
+            </span>
+
+          </div>
 
 
-              <p data-news-i18n="text02">
-                A versão 0.2 BETA amplia o Genome 3D
-                com suporte inicial à análise de
-                sequências de proteínas em arquivos FASTA,
-                preservando os recursos de DNA já existentes.
+          <h2>
+            Genome 3D 0.2 BETA lançado
+          </h2>
+
+
+          <p>
+            A versão 0.2 BETA amplia os recursos do
+            Genome 3D e adiciona suporte inicial para
+            sequências de proteínas em arquivos FASTA.
+          </p>
+
+
+          <details class="news-details">
+
+            <summary>
+              Ver detalhes
+            </summary>
+
+
+            <div class="news-details-content">
+
+              <p>
+                Entre as principais novidades desta versão:
               </p>
 
 
               <ul>
 
-                <li data-news-i18n="feature02a">
+                <li>
                   Suporte a arquivos FASTA de proteínas
                 </li>
 
-                <li data-news-i18n="feature02b">
+                <li>
                   Visualização da sequência de aminoácidos
                 </li>
 
-                <li data-news-i18n="feature02c">
+                <li>
                   Identificação de N-ter e C-ter
                 </li>
 
-                <li data-news-i18n="feature02d">
+                <li>
                   Contagem total de aminoácidos
                 </li>
 
-                <li data-news-i18n="feature02e">
+                <li>
                   Legenda por grupos de aminoácidos
                 </li>
 
-                <li data-news-i18n="feature02f">
+                <li>
                   Melhorias na interface
+                </li>
+
+                <li>
+                  Recursos existentes de DNA preservados
                 </li>
 
               </ul>
 
 
-              <span class="news-version">
-                Genome 3D 0.2 BETA
+              <a
+                class="old-button news-action-button"
+                href="downloads.html"
+              >
+                Ir para Downloads
+              </a>
+
+            </div>
+
+          </details>
+
+
+        </article>
+
+
+        <!-- =================================================
+             NOVIDADE 2
+        ================================================== -->
+
+        <article class="news-card">
+
+
+          <div class="news-card-top">
+
+            <div>
+
+              <span class="news-type website">
+                WEBSITE
               </span>
 
+              <span class="news-date">
+                20 de setembro de 2026
+              </span>
 
             </div>
 
-          </article>
+          </div>
 
 
-          <!-- ===============================================
-               CENTRAL DE DOWNLOADS
-               =============================================== -->
-
-          <article
-            class="news-entry"
-            data-category="website"
-          >
+          <h2>
+            Nova Central de Downloads
+          </h2>
 
 
-            <div class="news-entry-header">
+          <p>
+            O website do Genome 3D agora possui uma página
+            dedicada para organizar o download da versão
+            atual e o acesso às versões anteriores.
+          </p>
 
 
-              <div class="news-entry-meta">
+          <details class="news-details">
 
-                <span
-                  class="news-category website"
-                  data-news-i18n="categoryWebsite"
-                >
-                  WEBSITE
-                </span>
-
-                <span
-                  class="news-date"
-                  data-news-i18n="dateDownloads"
-                >
-                  20 de setembro de 2026
-                </span>
-
-              </div>
+            <summary>
+              Ver detalhes
+            </summary>
 
 
-              <h2 data-news-i18n="titleDownloads">
-                Nova Central de Downloads
-              </h2>
+            <div class="news-details-content">
 
-
-            </div>
-
-
-            <div class="news-entry-body">
-
-
-              <p data-news-i18n="textDownloads">
-                O website do Genome 3D agora possui uma
-                página dedicada aos downloads do aplicativo.
-                A nova central organiza a versão atual e
-                mantém acesso às versões anteriores.
+              <p>
+                A nova Central de Downloads reúne as versões
+                públicas do Genome 3D em uma única página.
               </p>
 
 
-              <p data-news-i18n="textDownloads2">
-                O acesso à página de downloads é reservado
-                a usuários autenticados no website.
+              <p>
+                A versão atual é destacada e as versões
+                anteriores permanecem disponíveis para
+                consulta e download.
               </p>
 
 
-            </div>
-
-          </article>
-
-
-          <!-- ===============================================
-               CONTAS E FEEDBACKS
-               =============================================== -->
-
-          <article
-            class="news-entry"
-            data-category="website"
-          >
-
-
-            <div class="news-entry-header">
-
-
-              <div class="news-entry-meta">
-
-                <span
-                  class="news-category website"
-                  data-news-i18n="categoryWebsite"
-                >
-                  WEBSITE
-                </span>
-
-                <span
-                  class="news-date"
-                  data-news-i18n="dateAccounts"
-                >
-                  Setembro de 2026
-                </span>
-
-              </div>
-
-
-              <h2 data-news-i18n="titleAccounts">
-                Contas, perfis e feedbacks
-              </h2>
-
-
-            </div>
-
-
-            <div class="news-entry-body">
-
-
-              <p data-news-i18n="textAccounts">
-                O website recebeu novos recursos para
-                criação de contas, autenticação de usuários,
-                personalização de perfil e envio de
-                feedbacks sobre o Genome 3D.
+              <p>
+                Por segurança e organização do projeto,
+                o acesso à página de downloads requer que
+                o usuário esteja autenticado.
               </p>
 
 
-              <p data-news-i18n="textAccounts2">
-                Os feedbacks enviados também podem ser
-                consultados na área dedicada à comunidade.
-              </p>
-
+              <a
+                class="old-button news-action-button"
+                href="downloads.html"
+              >
+                Acessar Downloads
+              </a>
 
             </div>
 
-          </article>
+          </details>
 
 
-        </div>
+        </article>
+
+
+        <!-- =================================================
+             NOVIDADE 3
+        ================================================== -->
+
+        <article class="news-card">
+
+
+          <div class="news-card-top">
+
+            <div>
+
+              <span class="news-type website">
+                WEBSITE
+              </span>
+
+              <span class="news-date">
+                Setembro de 2026
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <h2>
+            Contas, perfis e feedbacks
+          </h2>
+
+
+          <p>
+            O website recebeu novos recursos para contas,
+            perfis de usuários e interação com a comunidade
+            do Genome 3D.
+          </p>
+
+
+          <details class="news-details">
+
+            <summary>
+              Ver detalhes
+            </summary>
+
+
+            <div class="news-details-content">
+
+              <p>
+                Entre os novos recursos disponíveis no
+                website estão:
+              </p>
+
+
+              <ul>
+
+                <li>
+                  Criação de conta
+                </li>
+
+                <li>
+                  Login e autenticação
+                </li>
+
+                <li>
+                  Personalização do perfil
+                </li>
+
+                <li>
+                  Nickname de usuário
+                </li>
+
+                <li>
+                  Foto de perfil
+                </li>
+
+                <li>
+                  Envio de feedbacks
+                </li>
+
+                <li>
+                  Área para visualizar feedbacks
+                  da comunidade
+                </li>
+
+              </ul>
+
+            </div>
+
+          </details>
+
+
+        </article>
+
+
+        <!-- =================================================
+             PRÓXIMAS NOVIDADES SERÃO ADICIONADAS AQUI
+        ================================================== -->
 
 
       </section>
@@ -896,17 +575,14 @@
 
     <!-- ===================================================
          COLUNA DIREITA
-         =================================================== -->
+    ==================================================== -->
 
     <aside class="right-column">
 
 
       <div class="right-box">
 
-        <div
-          class="right-box-title"
-          data-news-i18n="currentRelease"
-        >
+        <div class="right-box-title">
           Versão atual
         </div>
 
@@ -920,52 +596,32 @@
           </strong>
         </p>
 
-        <a
-          href="downloads.html"
-          data-news-i18n="goDownloads"
-        >
-          Ir para downloads
+      </div>
+
+
+      <div class="right-box">
+
+        <div class="right-box-title">
+          Atualizações
+        </div>
+
+        <p class="news-side-text">
+          As novidades mais recentes aparecem
+          primeiro.
+        </p>
+
+      </div>
+
+
+      <div class="right-box">
+
+        <div class="right-box-title">
+          Downloads
+        </div>
+
+        <a href="downloads.html">
+          Central de Downloads
         </a>
-
-      </div>
-
-
-      <div class="right-box">
-
-        <div
-          class="right-box-title"
-          data-news-i18n="categories"
-        >
-          Categorias
-        </div>
-
-        <p>
-          Genome 3D
-        </p>
-
-        <p data-news-i18n="website">
-          Website
-        </p>
-
-      </div>
-
-
-      <div class="right-box">
-
-        <div
-          class="right-box-title"
-          data-news-i18n="aboutNews"
-        >
-          Sobre esta página
-        </div>
-
-        <p
-          class="news-small-note"
-          data-news-i18n="aboutNewsText"
-        >
-          Novas versões e mudanças relevantes
-          do projeto serão registradas aqui.
-        </p>
 
       </div>
 
@@ -978,12 +634,11 @@
 
   <!-- =====================================================
        RODAPÉ
-       ===================================================== -->
+  ====================================================== -->
 
   <footer class="footer">
 
     <div class="shell footer-inner">
-
 
       <div>
 
@@ -1010,404 +665,21 @@
 
       </a>
 
-
     </div>
 
   </footer>
 
 
   <!-- =====================================================
-       SISTEMA DE IDIOMA EXISTENTE
-       ===================================================== -->
+       SISTEMA DE IDIOMA
+  ====================================================== -->
 
   <script src="language.js"></script>
 
 
   <!-- =====================================================
-       NOVIDADES: TRADUÇÃO + FILTROS
-       ===================================================== -->
-
-  <script>
-
-    (() => {
-
-
-      const newsTranslations = {
-
-
-        pt: {
-
-          pageTitle:
-            "Novidades",
-
-          pageIntro:
-            "Acompanhe as atualizações do Genome 3D, novas versões do aplicativo e melhorias realizadas no website.",
-
-          filterAll:
-            "Todas",
-
-          filterApp:
-            "Genome 3D",
-
-          filterWebsite:
-            "Website",
-
-          categoryApp:
-            "GENOME 3D",
-
-          categoryWebsite:
-            "WEBSITE",
-
-          date02:
-            "20 de setembro de 2026",
-
-          title02:
-            "Genome 3D 0.2 BETA lançado",
-
-          text02:
-            "A versão 0.2 BETA amplia o Genome 3D com suporte inicial à análise de sequências de proteínas em arquivos FASTA, preservando os recursos de DNA já existentes.",
-
-          feature02a:
-            "Suporte a arquivos FASTA de proteínas",
-
-          feature02b:
-            "Visualização da sequência de aminoácidos",
-
-          feature02c:
-            "Identificação de N-ter e C-ter",
-
-          feature02d:
-            "Contagem total de aminoácidos",
-
-          feature02e:
-            "Legenda por grupos de aminoácidos",
-
-          feature02f:
-            "Melhorias na interface",
-
-          dateDownloads:
-            "20 de setembro de 2026",
-
-          titleDownloads:
-            "Nova Central de Downloads",
-
-          textDownloads:
-            "O website do Genome 3D agora possui uma página dedicada aos downloads do aplicativo. A nova central organiza a versão atual e mantém acesso às versões anteriores.",
-
-          textDownloads2:
-            "O acesso à página de downloads é reservado a usuários autenticados no website.",
-
-          dateAccounts:
-            "Setembro de 2026",
-
-          titleAccounts:
-            "Contas, perfis e feedbacks",
-
-          textAccounts:
-            "O website recebeu novos recursos para criação de contas, autenticação de usuários, personalização de perfil e envio de feedbacks sobre o Genome 3D.",
-
-          textAccounts2:
-            "Os feedbacks enviados também podem ser consultados na área dedicada à comunidade.",
-
-          currentRelease:
-            "Versão atual",
-
-          goDownloads:
-            "Ir para downloads",
-
-          categories:
-            "Categorias",
-
-          website:
-            "Website",
-
-          aboutNews:
-            "Sobre esta página",
-
-          aboutNewsText:
-            "Novas versões e mudanças relevantes do projeto serão registradas aqui."
-
-        },
-
-
-        en: {
-
-          pageTitle:
-            "News",
-
-          pageIntro:
-            "Follow Genome 3D updates, new application releases and improvements to the website.",
-
-          filterAll:
-            "All",
-
-          filterApp:
-            "Genome 3D",
-
-          filterWebsite:
-            "Website",
-
-          categoryApp:
-            "GENOME 3D",
-
-          categoryWebsite:
-            "WEBSITE",
-
-          date02:
-            "September 20, 2026",
-
-          title02:
-            "Genome 3D 0.2 BETA released",
-
-          text02:
-            "Version 0.2 BETA expands Genome 3D with initial support for analyzing protein sequences in FASTA files while preserving the existing DNA features.",
-
-          feature02a:
-            "Protein FASTA file support",
-
-          feature02b:
-            "Amino acid sequence visualization",
-
-          feature02c:
-            "N-ter and C-ter identification",
-
-          feature02d:
-            "Total amino acid count",
-
-          feature02e:
-            "Amino acid group legend",
-
-          feature02f:
-            "Interface improvements",
-
-          dateDownloads:
-            "September 20, 2026",
-
-          titleDownloads:
-            "New Download Center",
-
-          textDownloads:
-            "The Genome 3D website now includes a dedicated application download page. The new center organizes the current release while keeping previous versions available.",
-
-          textDownloads2:
-            "Access to the download page is reserved for authenticated website users.",
-
-          dateAccounts:
-            "September 2026",
-
-          titleAccounts:
-            "Accounts, profiles and feedback",
-
-          textAccounts:
-            "The website received new features for account creation, user authentication, profile customization and submitting feedback about Genome 3D.",
-
-          textAccounts2:
-            "Submitted feedback can also be viewed in the dedicated community area.",
-
-          currentRelease:
-            "Current version",
-
-          goDownloads:
-            "Go to downloads",
-
-          categories:
-            "Categories",
-
-          website:
-            "Website",
-
-          aboutNews:
-            "About this page",
-
-          aboutNewsText:
-            "New releases and relevant project changes will be recorded here."
-
-        }
-
-      };
-
-
-      function getLanguage() {
-
-        return (
-          localStorage.getItem(
-            "genome-language"
-          ) === "en"
-        )
-          ? "en"
-          : "pt";
-
-      }
-
-
-      function applyNewsLanguage() {
-
-        const language =
-          getLanguage();
-
-
-        document
-          .querySelectorAll(
-            "[data-news-i18n]"
-          )
-          .forEach(
-            (element) => {
-
-              const key =
-                element.dataset
-                  .newsI18n;
-
-
-              const text =
-                newsTranslations[
-                  language
-                ][key];
-
-
-              if (
-                text !== undefined
-              ) {
-
-                element.textContent =
-                  text;
-
-              }
-
-            }
-          );
-
-      }
-
-
-      /* ===============================================
-         FILTROS
-         =============================================== */
-
-      const filters =
-        document.querySelectorAll(
-          ".news-filter"
-        );
-
-
-      const entries =
-        document.querySelectorAll(
-          ".news-entry"
-        );
-
-
-      filters.forEach(
-        (button) => {
-
-          button.addEventListener(
-            "click",
-            () => {
-
-
-              filters.forEach(
-                (item) => {
-
-                  item.classList.remove(
-                    "active"
-                  );
-
-                }
-              );
-
-
-              button.classList.add(
-                "active"
-              );
-
-
-              const filter =
-                button.dataset.filter;
-
-
-              entries.forEach(
-                (entry) => {
-
-                  const category =
-                    entry.dataset.category;
-
-
-                  if (
-                    filter === "all" ||
-                    category === filter
-                  ) {
-
-                    entry.classList.remove(
-                      "news-hidden"
-                    );
-
-                  } else {
-
-                    entry.classList.add(
-                      "news-hidden"
-                    );
-
-                  }
-
-                }
-              );
-
-
-            }
-          );
-
-        }
-      );
-
-
-      document.addEventListener(
-        "DOMContentLoaded",
-        applyNewsLanguage
-      );
-
-
-      /*
-        Mantém esta página sincronizada
-        com o botão de idioma do language.js.
-      */
-
-      const originalSetItem =
-        localStorage.setItem;
-
-
-      localStorage.setItem =
-        function (
-          key,
-          value
-        ) {
-
-          originalSetItem.apply(
-            this,
-            arguments
-          );
-
-
-          if (
-            key ===
-            "genome-language"
-          ) {
-
-            setTimeout(
-              applyNewsLanguage,
-              0
-            );
-
-          }
-
-        };
-
-
-    })();
-
-  </script>
-
-
-  <!-- =====================================================
-       CONTA / PERFIL
-       ===================================================== -->
+       LOGIN / PERFIL
+  ====================================================== -->
 
   <script
     type="module"
