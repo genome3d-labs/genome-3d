@@ -1262,7 +1262,41 @@
 
   </script>
 
+<script type="module">
 
+  import {
+    auth
+  } from "./firebase-config.js?v=3";
+
+  import {
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+
+  document.body.style.visibility = "hidden";
+
+
+  onAuthStateChanged(
+    auth,
+    (user) => {
+
+      if (!user) {
+
+        window.location.replace(
+          "login.html?redirect=download"
+        );
+
+        return;
+      }
+
+
+      document.body.style.visibility =
+        "visible";
+
+    }
+  );
+
+</script>
   <!-- =====================================================
        ESTADO DE LOGIN
        Mantém Login / nickname / foto funcionando
