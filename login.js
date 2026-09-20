@@ -169,34 +169,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         const parametros =
-  new URLSearchParams(
-    window.location.search
-  );
+          new URLSearchParams(
+            window.location.search
+          );
 
-const destino =
-  parametros.get("redirect");
+        const destino =
+          parametros.get("redirect");
 
 
-setTimeout(() => {
+        setTimeout(() => {
 
-  if (destino === "feedbacks") {
+          if (destino === "feedbacks") {
 
-    window.location.href =
-      "feedbacks.html";
+            window.location.href =
+              "feedbacks.html";
 
-  } else if (destino === "download") {
+          } else if (destino === "download") {
 
-    window.location.href =
-      "index.html#downloads";
+            window.location.href =
+              "downloads.html";
 
-  } else {
+          } else {
 
-    window.location.href =
-      "index.html";
+            window.location.href =
+              "index.html";
 
-  }
+          }
 
-}, 700);
+        }, 700);
 
 
       } catch (error) {
