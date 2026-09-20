@@ -3,181 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Downloads | Genome 3D</title>
-
-  <!-- Mantém o mesmo CSS do site -->
+  <title>Genome Corporation©</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/webp" href="assets/iconeGenome.webp">
-
-  <!-- Estilos exclusivos da página de downloads -->
-  <style>
-    .downloads-intro {
-      margin-bottom: 24px;
-    }
-
-    .downloads-intro p {
-      max-width: 760px;
-      margin: 0;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .downloads-version-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      border: 1px solid #aeb5bc;
-      background: #fff;
-      box-shadow: inset 0 1px 0 #fff;
-    }
-
-    .download-version-card {
-      min-width: 0;
-      padding: 24px 26px 26px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .download-version-card + .download-version-card {
-      border-left: 2px solid #7f8a94;
-    }
-
-    .release-status {
-      margin: 0 0 6px;
-      color: #727272;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .download-version-card h2 {
-      margin: 0 0 16px;
-      color: #214f7f;
-      font-size: 27px;
-      line-height: 1.15;
-    }
-
-    .download-version-card h2 span {
-      display: block;
-      margin-top: 4px;
-      color: #111;
-      font-size: 21px;
-    }
-
-    .release-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin: 0 0 18px;
-      border-top: 1px solid #d0d4d8;
-      border-bottom: 1px solid #d0d4d8;
-    }
-
-    .release-meta div {
-      padding: 10px 8px;
-    }
-
-    .release-meta div + div {
-      border-left: 1px solid #d0d4d8;
-    }
-
-    .release-meta strong {
-      display: block;
-      margin-bottom: 3px;
-      color: #666;
-      font-size: 10px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .release-copy {
-      flex: 1;
-      color: #333;
-      line-height: 1.55;
-    }
-
-    .release-copy ul {
-      margin: 14px 0 22px 18px;
-      padding: 0;
-    }
-
-    .release-copy li {
-      margin-bottom: 6px;
-    }
-
-    .release-download {
-      width: 100%;
-      min-height: 44px;
-      margin-top: auto;
-    }
-
-    .release-download.unavailable {
-      opacity: .58;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-
-    .download-note {
-      margin-top: 18px;
-      padding: 12px 14px;
-      border: 1px solid #c6c6c6;
-      background: #f7f7f7;
-      color: #555;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .sidebar .active-link {
-      background: #dfeaf5;
-      font-weight: 700;
-    }
-
-    .version-link {
-      margin-top: 8px;
-      font-size: 12px;
-    }
-
-    @media (max-width: 900px) {
-      .downloads-version-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .download-version-card + .download-version-card {
-        border-left: 0;
-        border-top: 2px solid #7f8a94;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .release-meta {
-        grid-template-columns: 1fr;
-      }
-
-      .release-meta div + div {
-        border-left: 0;
-        border-top: 1px solid #d0d4d8;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div class="gov-strip">
     <div class="shell gov-strip-inner">
       <span>Genome Corporation©</span>
-      <span class="gov-note" data-i18n="topNote">
-        Projeto experimental de visualização genética
-      </span>
+      <span class="gov-note" data-i18n="topNote">Projeto experimental de visualização genética</span>
     </div>
   </div>
 
   <header class="masthead">
     <div class="shell masthead-inner">
       <a class="brand" href="index.html" aria-label="Página inicial">
-        <span class="brand-mark brand-logo-wrap">
-          <img class="brand-logo" src="assets/iconeGenome.webp" alt="Genome 3D logo">
-        </span>
-
+        <span class="brand-mark brand-logo-wrap"><img class="brand-logo" src="assets/iconeGenome.webp" alt="Genome 3D logo"></span>
         <span class="brand-copy">
           <strong>Genome 3D</strong>
           <small>Genome Corporation©</small>
@@ -203,403 +45,217 @@
 
   <nav class="nav-strip" aria-label="Menu principal">
     <div class="shell nav-inner">
-      <a class="nav-button" href="index.html#sobre" data-i18n="navAbout">
-        Sobre o Genome
-      </a>
-
-      <a class="nav-button" href="index.html#recursos" data-i18n="navResources">
-        Recursos
-      </a>
-
-      <a class="nav-button" href="downloads.html" data-i18n="navDownload">
-        Downloads
-      </a>
-
-      <a class="nav-button" href="index.html#corporacao">
-        Genome Corporation©
-      </a>
+      <a class="nav-button" href="#sobre" data-i18n="navAbout">Sobre o Genome</a>
+      <a class="nav-button" href="#recursos" data-i18n="navResources">Recursos</a>
+      <a class="nav-button" href="downloads.html" data-i18n="navDownload">Downloads</a>
+      <a class="nav-button" href="#corporacao">Genome Corporation©</a>
     </div>
   </nav>
 
   <main class="shell page-layout">
-
-    <!-- =====================================================
-         MENU LATERAL
-         ===================================================== -->
     <aside class="sidebar">
       <div class="sidebar-title">Genome 3D</div>
-
-      <a href="index.html#sobre" data-i18n="sideOverview">
-        Visão geral
-      </a>
-
-      <a href="index.html#recursos" data-i18n="sideResources">
-        Recursos atuais
-      </a>
-
-      <a class="active-link" href="downloads.html" data-i18n="sideDownload">
-        Download
-      </a>
-
-      <a href="index.html#corporacao" data-i18n="sideCorporation">
-        Sobre a corporação
-      </a>
-
-      <a href="novidades.html">
-        Novidades
-      </a>
+      <a href="#sobre" data-i18n="sideOverview">Visão geral</a>
+      <a href="#recursos" data-i18n="sideResources">Recursos atuais</a>
+      <a href="downloads.html" data-i18n="sideDownload">Download</a>
+      <a href="#corporacao" data-i18n="sideCorporation">Sobre a corporação</a>
+      <a href="login.html">Login</a>
+      <a href="novidades.html">Novidades</a>
 
       <div class="sidebar-block">
-        <span data-i18n="currentVersion">
-          Versão atual
-        </span>
-
+        <span data-i18n="currentVersion">Versão atual</span>
         <strong>0.2 BETA</strong>
-
-        <a class="version-link" href="#version-02" data-download-i18n="goCurrent">
-          Ver versão atual
-        </a>
       </div>
     </aside>
 
-
-    <!-- =====================================================
-         CONTEÚDO
-         ===================================================== -->
     <div class="main-content">
+      <section id="sobre" class="content-block intro-block">
+        <div class="section-rule"></div>
 
-      <section class="content-block">
-        <div class="section-title-row">
-          <h1 style="margin:0; color:#9a4f22; font-size:30px;" data-download-i18n="pageTitle">
-            Downloads
-          </h1>
-        </div>
+        <h1>
+          <span data-i18n="aboutPrefix">Sobre o</span>
+          <span class="genome-title">Genome 3D©</span>
+        </h1>
 
-        <div class="downloads-intro">
-          <p data-download-i18n="pageIntro">
-            Escolha uma versão do Genome 3D para download.
-            As versões anteriores permanecerão disponíveis neste arquivo.
-          </p>
-        </div>
+        <p class="lead" data-i18n="introLead">
+          O Genome 3D é um aplicativo em desenvolvimento para leitura,
+          exploração e visualização de sequências genéticas em arquivos FASTA.
+        </p>
 
+        <p data-i18n="introBody">
+          A proposta é apresentar a sequência de DNA de forma clara e visual,
+          reunindo fita principal, fita complementar e uma representação 3D
+          idealizada da dupla hélice em uma mesma interface.
+        </p>
 
-        <!-- =================================================
-             VERSÕES
-             ================================================= -->
-        <div class="downloads-version-grid">
-
-          <!-- ===============================================
-               0.2 BETA
-               =============================================== -->
-          <article class="download-version-card" id="version-02">
-
-            <p class="release-status" data-download-i18n="currentRelease">
-              VERSÃO ATUAL
-            </p>
-
-            <h2>
-              Genome 3D
-              <span>0.2 BETA</span>
-            </h2>
-
-            <div class="release-meta">
-              <div>
-                <strong data-download-i18n="platform">
-                  Plataforma
-                </strong>
-                <span>Windows</span>
-              </div>
-
-              <div>
-                <strong data-download-i18n="package">
-                  Pacote
-                </strong>
-                <span>Installer (.exe)</span>
-              </div>
-            </div>
-
-            <div class="release-copy">
-              <p data-download-i18n="release02Text">
-                Versão beta com suporte a sequências de DNA e proteínas em arquivos FASTA.
-              </p>
-
-              <ul>
-                <li data-download-i18n="r02a">Visualização 2D e 3D de DNA</li>
-                <li data-download-i18n="r02b">Suporte a FASTA de proteínas</li>
-                <li data-download-i18n="r02c">Visualização da sequência de aminoácidos</li>
-                <li data-download-i18n="r02d">Identificação de N-ter e C-ter</li>
-              </ul>
-            </div>
-
-            <!--
-              IMPORTANTE:
-              Quando publicarmos o instalador 0.2 no GitHub Releases,
-              troque href="#" pelo link direto do arquivo .exe
-              e remova a classe "unavailable".
-            -->
-            <a
-              class="old-button primary release-download unavailable"
-              href="#"
-              aria-disabled="true"
-              data-download-i18n="download02"
-            >
-              Download 0.2 BETA
-            </a>
+        <div class="quick-grid">
+          <article class="quick-card">
+            <div class="quick-icon">↓</div>
+            <h2>Download</h2>
+            <p data-i18n="downloadCardText">Acesse a versão pública disponível do Genome 3D.</p>
+            <a class="old-button primary" href="downloads.html" data-i18n="goDownloads">Ir para downloads</a>
           </article>
 
-
-          <!-- ===============================================
-               0.1 BETA
-               =============================================== -->
-          <article class="download-version-card" id="version-01">
-
-            <p class="release-status" data-download-i18n="previousRelease">
-              VERSÃO ANTERIOR
-            </p>
-
-            <h2>
-              Genome 3D
-              <span>0.1 BETA</span>
-            </h2>
-
-            <div class="release-meta">
-              <div>
-                <strong data-download-i18n="platform">
-                  Plataforma
-                </strong>
-                <span>Windows</span>
-              </div>
-
-              <div>
-                <strong data-download-i18n="package">
-                  Pacote
-                </strong>
-                <span>Installer (.exe)</span>
-              </div>
-            </div>
-
-            <div class="release-copy">
-              <p data-download-i18n="release01Text">
-                Primeira versão beta pública do Genome 3D, voltada à leitura e visualização de DNA.
-              </p>
-
-              <ul>
-                <li data-download-i18n="r01a">Leitura de arquivos FASTA de DNA</li>
-                <li data-download-i18n="r01b">Visualização 2D da sequência</li>
-                <li data-download-i18n="r01c">Fita complementar</li>
-                <li data-download-i18n="r01d">Modelo 3D idealizado da dupla hélice</li>
-              </ul>
-            </div>
-
-            <!--
-              Coloque aqui o link direto do instalador 0.1
-              caso queira manter o arquivo histórico disponível.
-            -->
-            <a
-              class="old-button release-download"
-              href="#"
-              data-download-i18n="download01"
-            >
-              Download 0.1 BETA
-            </a>
+          <article class="quick-card">
+            <div class="quick-icon">⌁</div>
+            <h2 data-i18n="viewTitle">Visualizar</h2>
+            <p data-i18n="viewCardText">Conheça as ferramentas atuais de leitura 2D e modelo 3D.</p>
+            <a class="old-button" href="#recursos" data-i18n="viewResources">Ver recursos</a>
           </article>
 
-        </div>
-
-        <div class="download-note" data-download-i18n="archiveNote">
-          As versões beta são experimentais. Para uso normal, prefira sempre a versão mais recente.
+          <article class="quick-card">
+            <div class="quick-icon">i</div>
+            <h2 data-i18n="projectTitle">Projeto</h2>
+            <p data-i18n="projectCardText">Entenda a proposta e o estágio atual do desenvolvimento.</p>
+            <a class="old-button" href="#corporacao" data-i18n="learnMore">Saiba mais</a>
+          </article>
         </div>
       </section>
 
+      <section id="recursos" class="content-block">
+        <div class="section-title-row">
+          <h2 data-i18n="resourcesHeading">Recursos atuais</h2>
+        </div>
+
+        <div class="resource-table">
+          <div class="resource-row">
+            <strong data-i18n="fastaTitle">Leitura FASTA</strong>
+            <span data-i18n="fastaText">Importação e leitura de sequências de DNA em arquivos FASTA.</span>
+          </div>
+
+          <div class="resource-row">
+            <strong data-i18n="view2dTitle">Visualização 2D</strong>
+            <span data-i18n="view2dText">Fita principal e complementar, com identificação visual de A, T, C e G.</span>
+          </div>
+
+          <div class="resource-row">
+            <strong data-i18n="model3dTitle">Modelo 3D</strong>
+            <span data-i18n="model3dText">Representação tridimensional idealizada da dupla hélice por trechos.</span>
+          </div>
+
+          <div class="resource-row">
+            <strong data-i18n="navigationTitle">Navegação</strong>
+            <span data-i18n="navigationText">Controles independentes para explorar a sequência em 2D e 3D.</span>
+          </div>
+        </div>
+
+        <div class="dna-key" aria-label="Legenda das bases">
+          <span><b class="a">A</b> <span data-i18n="adenine">Adenina</span></span>
+          <span><b class="t">T</b> <span data-i18n="thymine">Timina</span></span>
+          <span><b class="c">C</b> <span data-i18n="cytosine">Citosina</span></span>
+          <span><b class="g">G</b> <span data-i18n="guanine">Guanina</span></span>
+        </div>
+      </section>
+
+      <section id="downloads" class="content-block">
+        <div class="section-title-row">
+          <h2>Downloads</h2>
+        </div>
+
+        <div class="download-panel">
+          <div>
+            <p class="release-tag" data-i18n="currentVersionUpper">VERSÃO ATUAL</p>
+            <h3>Genome 0.2 BETA</h3>
+            <p data-i18n="downloadText">
+              Acesse a central de downloads do Genome 3D para obter a versão atual
+              e consultar versões anteriores.
+            </p>
+          </div>
+
+          <a class="old-button primary big-button" href="downloads.html" data-i18n="downloadSoon">
+            Ver downloads
+          </a>
+        </div>
+      </section>
+
+      <section id="corporacao" class="content-block">
+        <div class="section-title-row">
+          <h2 data-i18n="aboutCorporation">Sobre a Genome Corporation©</h2>
+        </div>
+
+        <p data-i18n="corporationText">
+          A Genome Corporation© é a identidade de desenvolvimento do Genome 3D
+          e de futuras ferramentas voltadas à apresentação e exploração visual
+          de dados genéticos.
+        </p>
+
+        <div class="notice">
+          <strong data-i18n="importantLabel">Importante:</strong>
+          <span data-i18n="importantText">
+            o Genome 3D está em fase experimental e educacional. Ele não substitui
+            ferramentas científicas validadas, análises laboratoriais ou softwares
+            especializados de bioinformática.
+          </span>
+        </div>
+      </section>
     </div>
 
-
-    <!-- =====================================================
-         COLUNA DIREITA
-         ===================================================== -->
     <aside class="right-column">
+      <div class="right-box">
+        <div class="right-box-title" data-i18n="quickAccess">Acesso rápido</div>
+        <a href="downloads.html" data-i18n="genomeDownload">Download do Genome</a>
+        <a href="#recursos" data-i18n="navResources">Recursos</a>
+        <a href="login.html" data-i18n="loginArea">Área de login</a>
+      </div>
 
       <div class="right-box">
-        <div class="right-box-title" data-download-i18n="downloadInfo">
-          Informações de download
-        </div>
-
+        <div class="right-box-title" data-i18n="projectTitle">Projeto</div>
+        <p>Genome 3D</p>
+        <p><span data-i18n="versionLabel">Versão</span> 0.2 BETA</p>
         <p>Windows</p>
-        <p>Installer (.exe)</p>
-        <p>Genome 3D 0.2 BETA</p>
       </div>
 
-      <div class="right-box">
-        <div class="right-box-title" data-download-i18n="versions">
-          Versões
-        </div>
+      <div class="right-box preview-box">
+        <div class="right-box-title" data-i18n="previewTitle">Prévia</div>
 
-        <a href="#version-02">0.2 BETA</a>
-        <a href="#version-01">0.1 BETA</a>
-      </div>
+        <a
+          class="preview-frame"
+          id="preview-link"
+          href="assets/previa.png"
+          target="_blank"
+          rel="noopener"
+          title="Clique para abrir a imagem completa"
+          data-i18n-title="previewOpenTitle"
+        >
+          <img
+            id="preview-image"
+            src="assets/previa.png"
+            alt="Prévia da interface do Genome 3D"
+            data-i18n-alt="previewAlt"
+          >
+        </a>
 
-      <div class="right-box">
-        <div class="right-box-title" data-download-i18n="updates">
-          Atualizações
-        </div>
+        <p class="preview-caption" data-i18n="previewCaption">
+          Interface atual do Genome 3D
+        </p>
 
-        <a href="novidades.html" data-download-i18n="seeNews">
-          Ver novidades do projeto
+        <a
+          class="preview-open"
+          id="preview-open-link"
+          href="assets/previa.png"
+          target="_blank"
+          rel="noopener"
+          data-i18n="viewFullImage"
+        >
+          Ver imagem completa
         </a>
       </div>
-
     </aside>
-
   </main>
-
 
   <footer class="footer">
     <div class="shell footer-inner">
       <div>
         <strong>Genome Corporation©</strong>
-        <span data-i18n="footerProject">
-          Genome 3D — projeto experimental
-        </span>
+        <span data-i18n="footerProject">Genome 3D — projeto experimental</span>
       </div>
 
-      <a href="mailto:genome.corporation.contact@gmail.com">
-        <span data-i18n="contactUs">Contate-nos</span>:
-        genome.corporation.contact@gmail.com
+      <a href="mailto:contato@genomecorporation.com">
+        <span data-i18n="contactUs">Contate-nos</span>: contato@genomecorporation.com
       </a>
     </div>
   </footer>
 
-
-  <!-- Sistema de idioma já existente no site -->
   <script src="language.js"></script>
-
-  <!-- Traduções exclusivas da página Downloads -->
-  <script>
-    (() => {
-
-      const downloadTranslations = {
-
-        pt: {
-          pageTitle: "Downloads",
-          pageIntro:
-            "Escolha uma versão do Genome 3D para download. As versões anteriores permanecerão disponíveis neste arquivo.",
-          goCurrent: "Ver versão atual",
-          currentRelease: "VERSÃO ATUAL",
-          previousRelease: "VERSÃO ANTERIOR",
-          platform: "Plataforma",
-          package: "Pacote",
-          release02Text:
-            "Versão beta com suporte a sequências de DNA e proteínas em arquivos FASTA.",
-          r02a: "Visualização 2D e 3D de DNA",
-          r02b: "Suporte a FASTA de proteínas",
-          r02c: "Visualização da sequência de aminoácidos",
-          r02d: "Identificação de N-ter e C-ter",
-          download02: "Download 0.2 BETA",
-          release01Text:
-            "Primeira versão beta pública do Genome 3D, voltada à leitura e visualização de DNA.",
-          r01a: "Leitura de arquivos FASTA de DNA",
-          r01b: "Visualização 2D da sequência",
-          r01c: "Fita complementar",
-          r01d: "Modelo 3D idealizado da dupla hélice",
-          download01: "Download 0.1 BETA",
-          archiveNote:
-            "As versões beta são experimentais. Para uso normal, prefira sempre a versão mais recente.",
-          downloadInfo: "Informações de download",
-          versions: "Versões",
-          updates: "Atualizações",
-          seeNews: "Ver novidades do projeto"
-        },
-
-        en: {
-          pageTitle: "Downloads",
-          pageIntro:
-            "Choose a Genome 3D version to download. Previous releases will remain available in this archive.",
-          goCurrent: "View current version",
-          currentRelease: "CURRENT VERSION",
-          previousRelease: "PREVIOUS VERSION",
-          platform: "Platform",
-          package: "Package",
-          release02Text:
-            "Beta release with support for DNA and protein sequences in FASTA files.",
-          r02a: "2D and 3D DNA visualization",
-          r02b: "Protein FASTA support",
-          r02c: "Amino acid sequence visualization",
-          r02d: "N-ter and C-ter identification",
-          download02: "Download 0.2 BETA",
-          release01Text:
-            "First public beta release of Genome 3D, focused on DNA reading and visualization.",
-          r01a: "DNA FASTA file reading",
-          r01b: "2D sequence visualization",
-          r01c: "Complementary strand",
-          r01d: "Idealized 3D double-helix model",
-          download01: "Download 0.1 BETA",
-          archiveNote:
-            "Beta releases are experimental. For normal use, always prefer the latest version.",
-          downloadInfo: "Download information",
-          versions: "Versions",
-          updates: "Updates",
-          seeNews: "View project news"
-        }
-
-      };
-
-
-      function getLanguage() {
-
-        return (
-          localStorage.getItem("genome-language") === "en"
-          ? "en"
-          : "pt"
-        );
-
-      }
-
-
-      function applyDownloadLanguage() {
-
-        const language =
-          getLanguage();
-
-        document
-          .querySelectorAll(
-            "[data-download-i18n]"
-          )
-          .forEach((element) => {
-
-            const key =
-              element.dataset.downloadI18n;
-
-            const text =
-              downloadTranslations[
-                language
-              ][key];
-
-            if (
-              text !== undefined
-            ) {
-
-              element.textContent =
-                text;
-
-            }
-
-          });
-
-      }
-
-
-      document.addEventListener(
-        "DOMContentLoaded",
-        applyDownloadLanguage
-      );
-
-
-      window.addEventListener(
-        "genome-language-changed",
-        applyDownloadLanguage
-      );
-
-    })();
-  </script>
 </body>
 </html>
